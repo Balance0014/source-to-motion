@@ -1,0 +1,79 @@
+{
+  "source": "../pulse-atlas/brief.docx",
+  "source_language": "en",
+  "output_language": "zh-CN",
+  "facts": [
+    {
+      "id": "name",
+      "display": "PULSE ATLAS",
+      "evidence": "Pulse Atlas",
+      "locator": "brief.docx, title"
+    },
+    {
+      "id": "demo",
+      "display": "虚构示例",
+      "evidence": "Fictional product brief for Source to Motion demonstration.",
+      "locator": "brief.docx, introduction"
+    },
+    {
+      "id": "identity",
+      "display": "事件分析看板",
+      "evidence": "an incident analytics dashboard",
+      "locator": "brief.docx, Product"
+    },
+    {
+      "id": "story",
+      "display": "从信号，到行动",
+      "evidence": "turns incoming events into an actionable response queue.",
+      "locator": "brief.docx, Product"
+    },
+    {
+      "id": "workflow",
+      "display": "信号 → 分诊 → 响应",
+      "evidence": "Signals become triaged incidents, then owners receive a response card.",
+      "locator": "brief.docx, Workflow"
+    },
+    {
+      "id": "events",
+      "display": "2,480",
+      "evidence": "2,480 events processed in the last 30 days.",
+      "locator": "brief.docx, Last 30 days"
+    },
+    {
+      "id": "events_label",
+      "display": "处理事件",
+      "evidence": "events processed",
+      "locator": "brief.docx, Last 30 days"
+    },
+    {
+      "id": "tagging",
+      "display": "97.4%",
+      "evidence": "97.4% of incoming events were auto-tagged in the last 30 days.",
+      "locator": "brief.docx, Last 30 days"
+    },
+    {
+      "id": "tagging_label",
+      "display": "事件自动标记",
+      "evidence": "incoming events were auto-tagged",
+      "locator": "brief.docx, Last 30 days"
+    },
+    {
+      "id": "response",
+      "display": "12 分钟",
+      "evidence": "Median response time was 12 minutes in the last 30 days.",
+      "locator": "brief.docx, Last 30 days"
+    },
+    {
+      "id": "response_label",
+      "display": "响应时间中位数",
+      "evidence": "Median response time",
+      "locator": "brief.docx, Last 30 days"
+    },
+    {
+      "id": "period",
+      "display": "近30天",
+      "evidence": "last 30 days.",
+      "locator": "brief.docx, Last 30 days"
+    }
+  ]
+}

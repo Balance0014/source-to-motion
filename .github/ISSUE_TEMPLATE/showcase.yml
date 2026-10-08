@@ -1,0 +1,46 @@
+name: Share a video / 分享成片
+description: Show a video made with Source to Motion using public or fictional input.
+title: "[Showcase] "
+body:
+  - type: markdown
+    attributes:
+      value: "Please use public or fictional input. Do not upload private briefs, API keys, or customer data."
+  - type: input
+    id: source
+    attributes:
+      label: Public source URL
+      description: The project or document used as input.
+      placeholder: https://github.com/example/project
+    validations:
+      required: true
+  - type: input
+    id: video
+    attributes:
+      label: Video URL
+      description: A public video link or repository asset.
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Video language
+      options:
+        - English
+        - 简体中文
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What facts did you check?
+      description: Mention any displayed numbers, units, periods, or comparisons.
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Permission
+      options:
+        - label: I have permission to share this source and video publicly.
+          required: true

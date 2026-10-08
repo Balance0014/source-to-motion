@@ -10,6 +10,8 @@ import unittest
 import wave
 from pathlib import Path
 
+from PIL import ImageChops
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -25,6 +27,19 @@ verify = module("stm_verify", "verify.py")
 
 
 class PipelineContracts(unittest.TestCase):
+    def test_chinese_video_evidence_and_distinct_beats(self):
+        facts_path = ROOT / "examples/pulse-atlas-zh/facts.json"
+        source_path = ROOT / "examples/pulse-atlas/source.json"
+        self.assertEqual(verify.verify_facts(facts_path, source_path), 12)
+        facts = {f["id"]: f for f in json.loads(facts_path.read_text())["facts"]}
+        spec = importlib.util.spec_from_file_location("stm_scene_zh", ROOT/"examples/pulse-atlas-zh/scene.py")
+        zh_scene = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(zh_scene)
+        intro = zh_scene.render(1.2, facts)
+        board = zh_scene.render(9.0, facts)
+        self.assertEqual(intro.size, (960, 540))
+        self.assertIsNotNone(ImageChops.difference(intro, board).getbbox())
+
     @unittest.skipUnless(shutil.which("ffmpeg"), "FFmpeg is required")
     def test_render_and_verify_with_short_audio(self):
         with tempfile.TemporaryDirectory() as folder:
