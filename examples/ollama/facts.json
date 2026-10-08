@@ -1,0 +1,92 @@
+{
+  "source": "https://github.com/ollama/ollama",
+  "source_language": "en",
+  "output_language": "en",
+  "snapshot_at_utc": "2026-10-08T15:47:11.111837+00:00",
+  "facts": [
+    {
+      "id": "name",
+      "display": "OLLAMA",
+      "evidence": "# Ollama",
+      "locator": "https://raw.githubusercontent.com/ollama/ollama/e3cddc3e897d8414a60a46e23f5ef3a99be2eb81/README.md"
+    },
+    {
+      "id": "hero",
+      "display": "BUILD WITH OPEN MODELS",
+      "evidence": "Start building with open models.",
+      "locator": "https://raw.githubusercontent.com/ollama/ollama/e3cddc3e897d8414a60a46e23f5ef3a99be2eb81/README.md"
+    },
+    {
+      "id": "input",
+      "display": "OPEN MODELS",
+      "evidence": "Start building with open models.",
+      "locator": "https://raw.githubusercontent.com/ollama/ollama/e3cddc3e897d8414a60a46e23f5ef3a99be2eb81/README.md"
+    },
+    {
+      "id": "transform",
+      "display": "RUN AND CHAT",
+      "evidence": "Run and chat with",
+      "locator": "https://raw.githubusercontent.com/ollama/ollama/e3cddc3e897d8414a60a46e23f5ef3a99be2eb81/README.md"
+    },
+    {
+      "id": "result",
+      "display": "REST API",
+      "evidence": "Ollama has a REST API for running and managing models.",
+      "locator": "https://raw.githubusercontent.com/ollama/ollama/e3cddc3e897d8414a60a46e23f5ef3a99be2eb81/README.md"
+    },
+    {
+      "id": "detail_1",
+      "display": "OPEN MODELS",
+      "evidence": "Start building with open models.",
+      "locator": "https://raw.githubusercontent.com/ollama/ollama/e3cddc3e897d8414a60a46e23f5ef3a99be2eb81/README.md"
+    },
+    {
+      "id": "detail_2",
+      "display": "ollama run gemma4",
+      "evidence": "ollama run gemma4",
+      "locator": "https://raw.githubusercontent.com/ollama/ollama/e3cddc3e897d8414a60a46e23f5ef3a99be2eb81/README.md"
+    },
+    {
+      "id": "detail_3",
+      "display": "REST API",
+      "evidence": "Ollama has a REST API for running and managing models.",
+      "locator": "https://raw.githubusercontent.com/ollama/ollama/e3cddc3e897d8414a60a46e23f5ef3a99be2eb81/README.md"
+    },
+    {
+      "id": "detail_4",
+      "display": "localhost:11434",
+      "evidence": "http://localhost:11434/api/chat",
+      "locator": "https://raw.githubusercontent.com/ollama/ollama/e3cddc3e897d8414a60a46e23f5ef3a99be2eb81/README.md"
+    },
+    {
+      "id": "detail_5",
+      "display": "PYTHON CLIENT",
+      "evidence": "### Python\n\n```\npip install ollama",
+      "locator": "https://raw.githubusercontent.com/ollama/ollama/e3cddc3e897d8414a60a46e23f5ef3a99be2eb81/README.md"
+    },
+    {
+      "id": "detail_6",
+      "display": "JAVASCRIPT CLIENT",
+      "evidence": "### JavaScript\n\n```\nnpm i ollama",
+      "locator": "https://raw.githubusercontent.com/ollama/ollama/e3cddc3e897d8414a60a46e23f5ef3a99be2eb81/README.md"
+    },
+    {
+      "id": "snapshot_date",
+      "display": "2026-10-08 UTC",
+      "evidence": "GitHub API captured: 2026-10-08 UTC",
+      "locator": "https://api.github.com/repos/ollama/ollama"
+    },
+    {
+      "id": "stars",
+      "display": "182,581",
+      "evidence": "stargazers_count: 182,581",
+      "locator": "https://api.github.com/repos/ollama/ollama"
+    },
+    {
+      "id": "forks",
+      "display": "18,156",
+      "evidence": "forks_count: 18,156",
+      "locator": "https://api.github.com/repos/ollama/ollama"
+    }
+  ]
+}

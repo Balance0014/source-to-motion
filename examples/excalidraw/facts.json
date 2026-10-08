@@ -1,0 +1,92 @@
+{
+  "source": "https://github.com/excalidraw/excalidraw",
+  "source_language": "en",
+  "output_language": "en",
+  "snapshot_at_utc": "2026-10-08T15:47:11.592830+00:00",
+  "facts": [
+    {
+      "id": "name",
+      "display": "EXCALIDRAW",
+      "evidence": "An open source virtual hand-drawn style whiteboard.",
+      "locator": "https://raw.githubusercontent.com/excalidraw/excalidraw/4c00f31ddcc20086bac1020428819fe0b9a30bce/README.md"
+    },
+    {
+      "id": "hero",
+      "display": "HAND-DRAWN WHITEBOARD",
+      "evidence": "An open source virtual hand-drawn style whiteboard.",
+      "locator": "https://raw.githubusercontent.com/excalidraw/excalidraw/4c00f31ddcc20086bac1020428819fe0b9a30bce/README.md"
+    },
+    {
+      "id": "input",
+      "display": "INFINITE CANVAS",
+      "evidence": "Infinite, canvas-based whiteboard.",
+      "locator": "https://raw.githubusercontent.com/excalidraw/excalidraw/4c00f31ddcc20086bac1020428819fe0b9a30bce/README.md"
+    },
+    {
+      "id": "transform",
+      "display": "DRAW + COLLABORATE",
+      "evidence": "Collaborative and end-to-end encrypted.",
+      "locator": "https://raw.githubusercontent.com/excalidraw/excalidraw/4c00f31ddcc20086bac1020428819fe0b9a30bce/README.md"
+    },
+    {
+      "id": "result",
+      "display": "EXPORT PNG + SVG",
+      "evidence": "Export to PNG, SVG & clipboard.",
+      "locator": "https://raw.githubusercontent.com/excalidraw/excalidraw/4c00f31ddcc20086bac1020428819fe0b9a30bce/README.md"
+    },
+    {
+      "id": "detail_1",
+      "display": "INFINITE CANVAS",
+      "evidence": "Infinite, canvas-based whiteboard.",
+      "locator": "https://raw.githubusercontent.com/excalidraw/excalidraw/4c00f31ddcc20086bac1020428819fe0b9a30bce/README.md"
+    },
+    {
+      "id": "detail_2",
+      "display": "HAND-DRAWN STYLE",
+      "evidence": "Hand-drawn like style.",
+      "locator": "https://raw.githubusercontent.com/excalidraw/excalidraw/4c00f31ddcc20086bac1020428819fe0b9a30bce/README.md"
+    },
+    {
+      "id": "detail_3",
+      "display": "REAL-TIME COLLAB",
+      "evidence": "Real-time collaboration.",
+      "locator": "https://raw.githubusercontent.com/excalidraw/excalidraw/4c00f31ddcc20086bac1020428819fe0b9a30bce/README.md"
+    },
+    {
+      "id": "detail_4",
+      "display": "END-TO-END ENCRYPTION",
+      "evidence": "End-to-end encryption.",
+      "locator": "https://raw.githubusercontent.com/excalidraw/excalidraw/4c00f31ddcc20086bac1020428819fe0b9a30bce/README.md"
+    },
+    {
+      "id": "detail_5",
+      "display": "PNG + SVG EXPORT",
+      "evidence": "Export to PNG, SVG & clipboard.",
+      "locator": "https://raw.githubusercontent.com/excalidraw/excalidraw/4c00f31ddcc20086bac1020428819fe0b9a30bce/README.md"
+    },
+    {
+      "id": "detail_6",
+      "display": "OPEN .excalidraw JSON",
+      "evidence": "export drawings as an `.excalidraw` json file.",
+      "locator": "https://raw.githubusercontent.com/excalidraw/excalidraw/4c00f31ddcc20086bac1020428819fe0b9a30bce/README.md"
+    },
+    {
+      "id": "snapshot_date",
+      "display": "2026-10-08 UTC",
+      "evidence": "GitHub API captured: 2026-10-08 UTC",
+      "locator": "https://api.github.com/repos/excalidraw/excalidraw"
+    },
+    {
+      "id": "stars",
+      "display": "133,691",
+      "evidence": "stargazers_count: 133,691",
+      "locator": "https://api.github.com/repos/excalidraw/excalidraw"
+    },
+    {
+      "id": "forks",
+      "display": "15,622",
+      "evidence": "forks_count: 15,622",
+      "locator": "https://api.github.com/repos/excalidraw/excalidraw"
+    }
+  ]
+}

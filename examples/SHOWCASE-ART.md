@@ -1,0 +1,29 @@
+# Original showcase art / 展示案例美术素材
+
+The six plates under `assets/*-hero.png` were generated with the built-in image generation tool for this repository. Each is 1122×1402 pixels, contains no intended factual copy, and is composited with code-drawn motion and source-backed words. These are metaphorical illustrations, not screenshots or actual outputs of the named software.
+
+以下六张素材使用内置 imagegen 生成；画面不承担事实文字，事实文案和运动由代码叠加。它们是概念插画，不是所示软件的真实截图或运行结果。
+
+## uv — `assets/uv-hero.png`
+
+> Use case: stylized-concept. Asset type: 4:5 vertical cinematic background plate for an unofficial uv developer-tool video. A colossal kinetic dependency engine fills the central-left 70%: hundreds of tiny package-like machined capsules and glowing amber/violet paths are being pulled through a monumental six-sided precision lock mechanism, as if a chaotic constellation is resolving into one clean build. Tangible metal, glass, deep perspective and volumetric light, dramatically lit, cinema-quality 3D design frame, intensely dynamic visual energy. Keep far right 28% and bottom 18% mostly dark and quiet for factual overlays. The visible story is disorder becoming an organized lock; not a generic circuit board, not a globe. No text, numbers, logos, UI cards, people, watermark.
+
+## Ollama — `assets/ollama-hero.png`
+
+> Use case: stylized-concept. Asset type: 4:5 vertical cinematic background plate for an unofficial Ollama open-model-runtime video. Show a monumental local inference chamber occupying the central-left 70%: an angular suspended glass-and-obsidian model core, with luminous mint-green input tokens as abstract small geometric shards flowing in from near foreground, passing through visible stacked internal layers, and a coherent violet/mint response beam emerging. It must clearly read as a machine transforming a prompt into output, not a planet, globe, human brain or generic abstract sphere. Deep photoreal 3D materials, industrial scale, volumetric atmospheric light, high-end motion-film visual, strong depth. Keep far right 28% and bottom 18% dark/quiet for later programmatic factual overlays. No text, numbers, logos, UI panels, people, watermark.
+
+## Trivy — `assets/trivy-hero.png`
+
+> Use case: stylized-concept. Asset type: 4:5 vertical cinematic moving-video background plate for an unofficial demo of a security scanner. Subject: a colossal dark glass shipping container / software artifact occupies the central-left 70% of the frame, seen in three-quarter perspective; a razor-thin red scanning plane passes through it, exposing layered internal components and a few isolated red warning glyph-like hotspots, with cyan structural wire edges. Composition: large three-dimensional object from x=8% to x=70%, open dark negative space on the far right for later programmatic fact panels, and dark lower 20% for later programmatic data overlays. Deep foreground/midground/background parallax, perspective, monumental scale, tactile glass, scratched metal, volumetric smoke, intense cinematic contrast, controlled red/cyan lighting. It should look like a premium motion-design film frame, not a PowerPoint slide or app screenshot. No text, numbers, logos, legible labels, UI panels, watermark, people, Earth or globe. The scanning plane and container must be visibly distinct so code can animate light sweeps on top.
+
+## DuckDB — `assets/duckdb-hero.png`
+
+> Use case: stylized-concept. Asset type: 4:5 vertical cinematic background plate for an unofficial DuckDB analytics video. A monumental in-process data engine fills the central-left 70%: physical vertical columns made of luminous data tiles rise from a dark black reflective plane; a thin golden SQL query plane slices through them and folds selected rows into a floating clean result slab. Rich sculptural geometry, blue-gold palette, very deep perspective, dramatic haze, high-end 3D motion-film still, physical texture and scale. Clear spatial metaphor for reading CSV/Parquet and querying without showing fabricated values. Keep far right 28% and bottom 18% dark for later factual overlays. No letters, text, numbers, logos, UI cards, people, globe, watermark.
+
+## Tailscale — `assets/tailscale-hero.png`
+
+> Use case: stylized-concept. Asset type: 4:5 vertical cinematic background plate for an unofficial Tailscale private-network video. Show several distinct dark physical device monoliths at different heights and depths in a vast black architectural void, occupying the central-left 70%. Bright teal secure light conduits connect devices into a visible peer-to-peer mesh, with one dramatic handshake spark in foreground; the network must be spatially legible, not a planet, globe, map, or generic circuit board. Sculptural glass/metal, cinematic perspective, deep parallax, controlled cyan and pale green lighting, floating atmospheric dust, polished premium 3D film frame. Keep far right 28% and bottom 18% dark for factual panels. No text, numbers, logos, UI panels, people, watermark.
+
+## Excalidraw — `assets/excalidraw-hero.png`
+
+> Use case: stylized-concept. Asset type: 4:5 vertical cinematic background plate for an unofficial Excalidraw whiteboard concept video. A giant warm ivory drawing sheet is suspended in a dark indigo architectural void, occupying central-left 70%. On the sheet, energetic hand-drawn black/purple strokes become a three-dimensional diagram of connected idea cards, arrows and spatial wireframe forms; several strokes peel off the page into space as if collaboration makes a sketch come alive. The visual must feel like an artist's living hand-drawn canvas, expressive and tactile, with graphite texture, paper grain, cinematic spot lighting, deep shadows and perspective. Very different from a generic futuristic HUD. Keep far right 28% and bottom 18% mostly dark for later factual overlays. No readable text, letters, numbers, logos, UI panels, people, watermark.

@@ -1,0 +1,92 @@
+{
+  "source": "https://github.com/aquasecurity/trivy",
+  "source_language": "en",
+  "output_language": "en",
+  "snapshot_at_utc": "2026-10-08T15:47:11.550926+00:00",
+  "facts": [
+    {
+      "id": "name",
+      "display": "TRIVY",
+      "evidence": "Trivy ([pronunciation][pronunciation]) is a comprehensive and versatile security scanner.",
+      "locator": "https://raw.githubusercontent.com/aquasecurity/trivy/3f664e55b7b3f636f29d82f38340fd899c96fedc/README.md"
+    },
+    {
+      "id": "hero",
+      "display": "SECURITY SCANNER",
+      "evidence": "comprehensive and versatile security scanner",
+      "locator": "https://raw.githubusercontent.com/aquasecurity/trivy/3f664e55b7b3f636f29d82f38340fd899c96fedc/README.md"
+    },
+    {
+      "id": "input",
+      "display": "CONTAINER IMAGE",
+      "evidence": "- Container Image",
+      "locator": "https://raw.githubusercontent.com/aquasecurity/trivy/3f664e55b7b3f636f29d82f38340fd899c96fedc/README.md"
+    },
+    {
+      "id": "transform",
+      "display": "SCAN FOR CVEs",
+      "evidence": "- Known vulnerabilities (CVEs)",
+      "locator": "https://raw.githubusercontent.com/aquasecurity/trivy/3f664e55b7b3f636f29d82f38340fd899c96fedc/README.md"
+    },
+    {
+      "id": "result",
+      "display": "MISCONFIGURATIONS + SECRETS",
+      "evidence": "- IaC issues and misconfigurations\n- Sensitive information and secrets",
+      "locator": "https://raw.githubusercontent.com/aquasecurity/trivy/3f664e55b7b3f636f29d82f38340fd899c96fedc/README.md"
+    },
+    {
+      "id": "detail_1",
+      "display": "CONTAINER IMAGE",
+      "evidence": "- Container Image",
+      "locator": "https://raw.githubusercontent.com/aquasecurity/trivy/3f664e55b7b3f636f29d82f38340fd899c96fedc/README.md"
+    },
+    {
+      "id": "detail_2",
+      "display": "GIT REPOSITORY",
+      "evidence": "- Git Repository (remote)",
+      "locator": "https://raw.githubusercontent.com/aquasecurity/trivy/3f664e55b7b3f636f29d82f38340fd899c96fedc/README.md"
+    },
+    {
+      "id": "detail_3",
+      "display": "FILESYSTEM",
+      "evidence": "- Filesystem",
+      "locator": "https://raw.githubusercontent.com/aquasecurity/trivy/3f664e55b7b3f636f29d82f38340fd899c96fedc/README.md"
+    },
+    {
+      "id": "detail_4",
+      "display": "CVEs",
+      "evidence": "- Known vulnerabilities (CVEs)",
+      "locator": "https://raw.githubusercontent.com/aquasecurity/trivy/3f664e55b7b3f636f29d82f38340fd899c96fedc/README.md"
+    },
+    {
+      "id": "detail_5",
+      "display": "MISCONFIGURATIONS",
+      "evidence": "- IaC issues and misconfigurations",
+      "locator": "https://raw.githubusercontent.com/aquasecurity/trivy/3f664e55b7b3f636f29d82f38340fd899c96fedc/README.md"
+    },
+    {
+      "id": "detail_6",
+      "display": "SECRETS",
+      "evidence": "- Sensitive information and secrets",
+      "locator": "https://raw.githubusercontent.com/aquasecurity/trivy/3f664e55b7b3f636f29d82f38340fd899c96fedc/README.md"
+    },
+    {
+      "id": "snapshot_date",
+      "display": "2026-10-08 UTC",
+      "evidence": "GitHub API captured: 2026-10-08 UTC",
+      "locator": "https://api.github.com/repos/aquasecurity/trivy"
+    },
+    {
+      "id": "stars",
+      "display": "38,295",
+      "evidence": "stargazers_count: 38,295",
+      "locator": "https://api.github.com/repos/aquasecurity/trivy"
+    },
+    {
+      "id": "forks",
+      "display": "746",
+      "evidence": "forks_count: 746",
+      "locator": "https://api.github.com/repos/aquasecurity/trivy"
+    }
+  ]
+}

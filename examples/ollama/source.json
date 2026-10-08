@@ -1,0 +1,14 @@
+{
+  "source": "https://github.com/ollama/ollama",
+  "locator": "https://raw.githubusercontent.com/ollama/ollama/e3cddc3e897d8414a60a46e23f5ef3a99be2eb81/README.md",
+  "kind": "github-readme",
+  "ocr": false,
+  "retrieved_at_utc": "2026-10-08T14:31:35+00:00",
+  "text": "# Ollama\nStart building with open models.\nStart building with open models.\nRun and chat with\nOllama has a REST API for running and managing models.\nStart building with open models.\nollama run gemma4\nOllama has a REST API for running and managing models.\nhttp://localhost:11434/api/chat\n### Python\n### JavaScript\nGitHub API captured: 2026-10-08 UTC\nstargazers_count: 182,581\nforks_count: 18,156\n### Python\n\n```\npip install ollama\n### JavaScript\n\n```\nnpm i ollama",
+  "github_snapshot": {
+    "stars": 182581,
+    "forks": 18156,
+    "captured_at_utc": "2026-10-08T15:47:11.111837+00:00",
+    "url": "https://api.github.com/repos/ollama/ollama"
+  }
+}
