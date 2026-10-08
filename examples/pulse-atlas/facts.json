@@ -1,0 +1,65 @@
+{
+  "source": "brief.docx",
+  "facts": [
+    {
+      "id": "name",
+      "display": "PULSE ATLAS",
+      "evidence": "Pulse Atlas",
+      "locator": "brief.docx, title"
+    },
+    {
+      "id": "identity",
+      "display": "INCIDENT ANALYTICS",
+      "evidence": "an incident analytics dashboard",
+      "locator": "brief.docx, Product"
+    },
+    {
+      "id": "workflow",
+      "display": "SIGNALS  →  TRIAGE  →  RESPONSE",
+      "evidence": "Signals become triaged incidents, then owners receive a response card.",
+      "locator": "brief.docx, Workflow"
+    },
+    {
+      "id": "events",
+      "display": "2,480",
+      "evidence": "2,480 events processed in the last 30 days.",
+      "locator": "brief.docx, Last 30 days"
+    },
+    {
+      "id": "events_label",
+      "display": "EVENTS PROCESSED",
+      "evidence": "events processed",
+      "locator": "brief.docx, Last 30 days"
+    },
+    {
+      "id": "tagging",
+      "display": "97.4%",
+      "evidence": "97.4% of incoming events were auto-tagged in the last 30 days.",
+      "locator": "brief.docx, Last 30 days"
+    },
+    {
+      "id": "tagging_label",
+      "display": "AUTO-TAGGED EVENTS",
+      "evidence": "incoming events were auto-tagged",
+      "locator": "brief.docx, Last 30 days"
+    },
+    {
+      "id": "response",
+      "display": "12 min",
+      "evidence": "Median response time was 12 minutes in the last 30 days.",
+      "locator": "brief.docx, Last 30 days"
+    },
+    {
+      "id": "response_label",
+      "display": "MEDIAN RESPONSE",
+      "evidence": "Median response time",
+      "locator": "brief.docx, Last 30 days"
+    },
+    {
+      "id": "period",
+      "display": "LAST 30 DAYS",
+      "evidence": "last 30 days.",
+      "locator": "brief.docx, Last 30 days"
+    }
+  ]
+}
