@@ -1,0 +1,59 @@
+{
+  "source": "https://github.com/astral-sh/uv",
+  "facts": [
+    {
+      "id": "identity",
+      "display": "Python package + project manager",
+      "evidence": "An extremely fast Python package and project manager, written in Rust.",
+      "locator": "README.md, opening paragraph"
+    },
+    {
+      "id": "rust",
+      "display": "WRITTEN IN RUST",
+      "evidence": "written in Rust.",
+      "locator": "README.md, opening paragraph"
+    },
+    {
+      "id": "scope",
+      "display": "Packages. Projects.",
+      "evidence": "Python package and project manager",
+      "locator": "README.md, opening paragraph"
+    },
+    {
+      "id": "single_tool",
+      "display": "ONE TOOL",
+      "evidence": "A single tool to replace `pip`, `pip-tools`, `pipx`, `poetry`, `pyenv`, `twine`, `virtualenv`, and more.",
+      "locator": "README.md, Highlights"
+    },
+    {
+      "id": "speed",
+      "display": "10–100×",
+      "evidence": "10-100x faster",
+      "locator": "README.md, Highlights; linked BENCHMARKS.md"
+    },
+    {
+      "id": "speed_comparison",
+      "display": "FASTER THAN PIP",
+      "evidence": "than `pip`.",
+      "locator": "README.md, Highlights; linked BENCHMARKS.md"
+    },
+    {
+      "id": "package_manager",
+      "display": "PACKAGE MANAGER",
+      "evidence": "Python package and project manager",
+      "locator": "README.md, opening paragraph"
+    },
+    {
+      "id": "project_manager",
+      "display": "PROJECT MANAGER",
+      "evidence": "Python package and project manager",
+      "locator": "README.md, opening paragraph"
+    },
+    {
+      "id": "python_versions",
+      "display": "PYTHON VERSIONS",
+      "evidence": "Python versions.",
+      "locator": "README.md, Highlights"
+    }
+  ]
+}

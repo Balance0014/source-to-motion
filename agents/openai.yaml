@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source to Motion"
+  short_description: "Create source-backed short motion videos"
+  default_prompt: "Use $source-to-motion to turn this project source into a short original motion video."

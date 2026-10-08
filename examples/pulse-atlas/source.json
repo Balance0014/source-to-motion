@@ -1,0 +1,8 @@
+{
+  "source": "brief.docx",
+  "locator": "brief.docx",
+  "kind": "docx",
+  "ocr": false,
+  "retrieved_at_utc": "2026-10-08T08:22:08+00:00",
+  "text": "Pulse Atlas\nFictional product brief for Source to Motion demonstration. These numbers are synthetic test data, not a real company claim.\nProduct\nPulse Atlas is an incident analytics dashboard that turns incoming events into an actionable response queue.\nLast 30 days\n2,480 events processed in the last 30 days.\n97.4% of incoming events were auto-tagged in the last 30 days.\nMedian response time was 12 minutes in the last 30 days.\nWorkflow\nSignals become triaged incidents, then owners receive a response card."
+}
