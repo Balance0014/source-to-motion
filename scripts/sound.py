@@ -36,7 +36,7 @@ def main():
                 u = t - when
                 if 0 <= u < .45:
                     cue += .075 * math.sin(2*math.pi*(520-280*u)*u) * math.exp(-8*u)
-            sample = max(-1, min(1, (pad + beat + cue) * fade))
+            sample = max(-1, min(1, (pad + beat + cue) * 2.2 * fade))
             chunk += int(sample * 32767).to_bytes(2, "little", signed=True)
             if len(chunk) >= 65536:
                 wav.writeframes(chunk)

@@ -1,0 +1,14 @@
+{
+  "source": "https://github.com/aquasecurity/trivy",
+  "locator": "https://raw.githubusercontent.com/aquasecurity/trivy/3f664e55b7b3f636f29d82f38340fd899c96fedc/README.md",
+  "kind": "github-readme",
+  "ocr": false,
+  "retrieved_at_utc": "2026-10-08T14:31:39+00:00",
+  "text": "Trivy ([pronunciation][pronunciation]) is a comprehensive and versatile security scanner.\ncomprehensive and versatile security scanner\n- Container Image\n- Known vulnerabilities (CVEs)\n- IaC issues and misconfigurations\n- Sensitive information and secrets\n- Container Image\n- Git Repository (remote)\n- Filesystem\n- Known vulnerabilities (CVEs)\n- IaC issues and misconfigurations\n- Sensitive information and secrets\nGitHub API captured: 2026-10-08 UTC\nstargazers_count: 38,295\nforks_count: 746",
+  "github_snapshot": {
+    "stars": 38295,
+    "forks": 746,
+    "captured_at_utc": "2026-10-08T15:47:11.550926+00:00",
+    "url": "https://api.github.com/repos/aquasecurity/trivy"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "source": "https://github.com/duckdb/duckdb",
+  "source_language": "en",
+  "output_language": "en",
+  "snapshot_at_utc": "2026-10-08T15:47:11.694816+00:00",
+  "facts": [
+    {
+      "id": "name",
+      "display": "DUCKDB",
+      "evidence": "## DuckDB",
+      "locator": "https://raw.githubusercontent.com/duckdb/duckdb/d4c9dfd469f25b217c6fa6090dae3f4899feb5cc/README.md"
+    },
+    {
+      "id": "hero",
+      "display": "ANALYTICAL DATABASE",
+      "evidence": "DuckDB is a high-performance analytical database system.",
+      "locator": "https://raw.githubusercontent.com/duckdb/duckdb/d4c9dfd469f25b217c6fa6090dae3f4899feb5cc/README.md"
+    },
+    {
+      "id": "input",
+      "display": "CSV + PARQUET",
+      "evidence": "For CSV files and Parquet files, data import is as simple as referencing the file in the FROM clause:",
+      "locator": "https://raw.githubusercontent.com/duckdb/duckdb/d4c9dfd469f25b217c6fa6090dae3f4899feb5cc/README.md"
+    },
+    {
+      "id": "transform",
+      "display": "SQL QUERY",
+      "evidence": "SELECT * FROM",
+      "locator": "https://raw.githubusercontent.com/duckdb/duckdb/d4c9dfd469f25b217c6fa6090dae3f4899feb5cc/README.md"
+    },
+    {
+      "id": "result",
+      "display": "QUERY FILES DIRECTLY",
+      "evidence": "SELECT * FROM 'myfile.parquet';",
+      "locator": "https://raw.githubusercontent.com/duckdb/duckdb/d4c9dfd469f25b217c6fa6090dae3f4899feb5cc/README.md"
+    },
+    {
+      "id": "detail_1",
+      "display": "CSV FILES",
+      "evidence": "For CSV files and Parquet files",
+      "locator": "https://raw.githubusercontent.com/duckdb/duckdb/d4c9dfd469f25b217c6fa6090dae3f4899feb5cc/README.md"
+    },
+    {
+      "id": "detail_2",
+      "display": "PARQUET FILES",
+      "evidence": "For CSV files and Parquet files",
+      "locator": "https://raw.githubusercontent.com/duckdb/duckdb/d4c9dfd469f25b217c6fa6090dae3f4899feb5cc/README.md"
+    },
+    {
+      "id": "detail_3",
+      "display": "SELECT * FROM 'myfile.csv';",
+      "evidence": "SELECT * FROM 'myfile.csv';",
+      "locator": "https://raw.githubusercontent.com/duckdb/duckdb/d4c9dfd469f25b217c6fa6090dae3f4899feb5cc/README.md"
+    },
+    {
+      "id": "detail_4",
+      "display": "SELECT * FROM 'myfile.parquet';",
+      "evidence": "SELECT * FROM 'myfile.parquet';",
+      "locator": "https://raw.githubusercontent.com/duckdb/duckdb/d4c9dfd469f25b217c6fa6090dae3f4899feb5cc/README.md"
+    },
+    {
+      "id": "detail_5",
+      "display": "WINDOW FUNCTIONS",
+      "evidence": "window functions",
+      "locator": "https://raw.githubusercontent.com/duckdb/duckdb/d4c9dfd469f25b217c6fa6090dae3f4899feb5cc/README.md"
+    },
+    {
+      "id": "detail_6",
+      "display": "PYTHON / R / JAVA / WASM",
+      "evidence": "has clients for [Python](https://duckdb.org/docs/current/clients/python/overview), [R](https://duckdb.org/docs/current/clients/r), [Java](https://duckdb.org/docs/current/clients/java), [Wasm](https://duckdb.org/docs/current/clients/wasm/overview), etc., with deep integrations",
+      "locator": "https://raw.githubusercontent.com/duckdb/duckdb/d4c9dfd469f25b217c6fa6090dae3f4899feb5cc/README.md"
+    },
+    {
+      "id": "snapshot_date",
+      "display": "2026-10-08 UTC",
+      "evidence": "GitHub API captured: 2026-10-08 UTC",
+      "locator": "https://api.github.com/repos/duckdb/duckdb"
+    },
+    {
+      "id": "stars",
+      "display": "41,986",
+      "evidence": "stargazers_count: 41,986",
+      "locator": "https://api.github.com/repos/duckdb/duckdb"
+    },
+    {
+      "id": "forks",
+      "display": "3,882",
+      "evidence": "forks_count: 3,882",
+      "locator": "https://api.github.com/repos/duckdb/duckdb"
+    }
+  ]
+}

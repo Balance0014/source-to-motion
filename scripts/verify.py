@@ -18,7 +18,8 @@ def normalized(text: str) -> str:
 
 
 def numbers(text: str) -> list[str]:
-    return re.findall(r"\d+(?:[.,]\d+)?", text)
+    tokens = re.findall(r"\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?", text)
+    return [token.replace(",", "") for token in tokens]
 
 
 def verify_facts(facts_path: Path, source_path: Path | None):

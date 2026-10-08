@@ -9,3 +9,11 @@ The two `STM-Sans-SC-*.ttf` files are small, renamed subsets of Google's [Noto S
 - Font license: [SIL Open Font License 1.1](OFL.txt). The repository's MIT license does not replace the font's OFL license.
 
 For a new Chinese-language scene, install or provide a full CJK font with the needed glyphs. Do not assume these example subsets cover new product text.
+
+## GapMine Latin sample font
+
+`SpaceGrotesk-Variable.ttf` is the unmodified [Space Grotesk variable font](https://github.com/google/fonts/tree/main/ofl/spacegrotesk) from Google Fonts, used by the GapMine example. It is covered by its separate [SIL Open Font License 1.1](SpaceGrotesk-OFL.txt).
+
+- Upstream file: `ofl/spacegrotesk/SpaceGrotesk[wght].ttf`
+- Upstream font commit: `2861cb7b12f90c0a294a12ed666e381e2211872f`
+- Bundled file SHA-256: `acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72`

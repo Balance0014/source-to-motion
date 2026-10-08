@@ -1,0 +1,92 @@
+{
+  "source": "https://github.com/tailscale/tailscale",
+  "source_language": "en",
+  "output_language": "en",
+  "snapshot_at_utc": "2026-10-08T15:47:11.100261+00:00",
+  "facts": [
+    {
+      "id": "name",
+      "display": "TAILSCALE",
+      "evidence": "# Tailscale",
+      "locator": "https://raw.githubusercontent.com/tailscale/tailscale/156ff9e43961f456f5308901c76caee39e6db3ad/README.md"
+    },
+    {
+      "id": "hero",
+      "display": "PRIVATE WIREGUARD® NETWORKS",
+      "evidence": "Private WireGuard® networks made easy",
+      "locator": "https://raw.githubusercontent.com/tailscale/tailscale/156ff9e43961f456f5308901c76caee39e6db3ad/README.md"
+    },
+    {
+      "id": "input",
+      "display": "DEVICES",
+      "evidence": "The `tailscaled` daemon runs on Linux, Windows",
+      "locator": "https://raw.githubusercontent.com/tailscale/tailscale/156ff9e43961f456f5308901c76caee39e6db3ad/README.md"
+    },
+    {
+      "id": "transform",
+      "display": "TAILSCALED + CLI",
+      "evidence": "it includes the `tailscaled` daemon and\nthe `tailscale` CLI tool.",
+      "locator": "https://raw.githubusercontent.com/tailscale/tailscale/156ff9e43961f456f5308901c76caee39e6db3ad/README.md"
+    },
+    {
+      "id": "result",
+      "display": "PRIVATE NETWORK",
+      "evidence": "Private WireGuard® networks made easy",
+      "locator": "https://raw.githubusercontent.com/tailscale/tailscale/156ff9e43961f456f5308901c76caee39e6db3ad/README.md"
+    },
+    {
+      "id": "detail_1",
+      "display": "WIREGUARD® NETWORK",
+      "evidence": "Private WireGuard® networks made easy",
+      "locator": "https://raw.githubusercontent.com/tailscale/tailscale/156ff9e43961f456f5308901c76caee39e6db3ad/README.md"
+    },
+    {
+      "id": "detail_2",
+      "display": "PRIVATE NETWORK",
+      "evidence": "Private WireGuard® networks made easy",
+      "locator": "https://raw.githubusercontent.com/tailscale/tailscale/156ff9e43961f456f5308901c76caee39e6db3ad/README.md"
+    },
+    {
+      "id": "detail_3",
+      "display": "tailscaled DAEMON",
+      "evidence": "the `tailscaled` daemon",
+      "locator": "https://raw.githubusercontent.com/tailscale/tailscale/156ff9e43961f456f5308901c76caee39e6db3ad/README.md"
+    },
+    {
+      "id": "detail_4",
+      "display": "tailscale CLI",
+      "evidence": "the `tailscale` CLI tool",
+      "locator": "https://raw.githubusercontent.com/tailscale/tailscale/156ff9e43961f456f5308901c76caee39e6db3ad/README.md"
+    },
+    {
+      "id": "detail_5",
+      "display": "LINUX + WINDOWS",
+      "evidence": "daemon runs on Linux, Windows",
+      "locator": "https://raw.githubusercontent.com/tailscale/tailscale/156ff9e43961f456f5308901c76caee39e6db3ad/README.md"
+    },
+    {
+      "id": "detail_6",
+      "display": "MACOS + IOS + ANDROID",
+      "evidence": "The `tailscaled` daemon runs on Linux, Windows,\n[macOS](https://tailscale.com/kb/1065/macos-variants/), and to varying degrees\non FreeBSD and OpenBSD. The Tailscale iOS and Android apps use this repo's\ncode, but this repo doesn't contain the mobile GUI code.",
+      "locator": "https://raw.githubusercontent.com/tailscale/tailscale/156ff9e43961f456f5308901c76caee39e6db3ad/README.md"
+    },
+    {
+      "id": "snapshot_date",
+      "display": "2026-10-08 UTC",
+      "evidence": "GitHub API captured: 2026-10-08 UTC",
+      "locator": "https://api.github.com/repos/tailscale/tailscale"
+    },
+    {
+      "id": "stars",
+      "display": "37,275",
+      "evidence": "stargazers_count: 37,275",
+      "locator": "https://api.github.com/repos/tailscale/tailscale"
+    },
+    {
+      "id": "forks",
+      "display": "3,299",
+      "evidence": "forks_count: 3,299",
+      "locator": "https://api.github.com/repos/tailscale/tailscale"
+    }
+  ]
+}

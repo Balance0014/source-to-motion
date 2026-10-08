@@ -1,0 +1,14 @@
+{
+  "source": "https://github.com/excalidraw/excalidraw",
+  "locator": "https://raw.githubusercontent.com/excalidraw/excalidraw/4c00f31ddcc20086bac1020428819fe0b9a30bce/README.md",
+  "kind": "github-readme",
+  "ocr": false,
+  "retrieved_at_utc": "2026-10-08T14:31:50+00:00",
+  "text": "An open source virtual hand-drawn style whiteboard.\nAn open source virtual hand-drawn style whiteboard.\nInfinite, canvas-based whiteboard.\nCollaborative and end-to-end encrypted.\nExport to PNG, SVG & clipboard.\nInfinite, canvas-based whiteboard.\nHand-drawn like style.\nReal-time collaboration.\nEnd-to-end encryption.\nExport to PNG, SVG & clipboard.\nexport drawings as an `.excalidraw` json file.\nGitHub API captured: 2026-10-08 UTC\nstargazers_count: 133,691\nforks_count: 15,622",
+  "github_snapshot": {
+    "stars": 133691,
+    "forks": 15622,
+    "captured_at_utc": "2026-10-08T15:47:11.592830+00:00",
+    "url": "https://api.github.com/repos/excalidraw/excalidraw"
+  }
+}

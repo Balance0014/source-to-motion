@@ -27,6 +27,18 @@ verify = module("stm_verify", "verify.py")
 
 
 class PipelineContracts(unittest.TestCase):
+    def test_gapmine_snapshot_accepts_grouping_but_rejects_changed_count(self):
+        facts_path = ROOT / "examples/gapmine/facts.json"
+        source_path = ROOT / "examples/gapmine/source.json"
+        self.assertEqual(verify.verify_facts(facts_path, source_path), 22)
+        altered = json.loads(facts_path.read_text())
+        next(f for f in altered["facts"] if f["id"] == "cards")["display"] = "1,141"
+        with tempfile.TemporaryDirectory() as folder:
+            bad = Path(folder) / "facts.json"
+            bad.write_text(json.dumps(altered))
+            with self.assertRaisesRegex(ValueError, "numbers absent"):
+                verify.verify_facts(bad, source_path)
+
     def test_chinese_video_evidence_and_distinct_beats(self):
         facts_path = ROOT / "examples/pulse-atlas-zh/facts.json"
         source_path = ROOT / "examples/pulse-atlas/source.json"
