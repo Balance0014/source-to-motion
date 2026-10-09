@@ -1,6 +1,8 @@
-# Scene contract
+# Scene contracts
 
-The renderer imports a Python scene file. It must provide:
+## Python/Pillow scene
+
+`scripts/render.py` imports a Python scene file. It must provide:
 
 ```python
 SIZE = (960, 540)
@@ -14,7 +16,31 @@ def render(t: float, facts: dict) -> PIL.Image.Image:
     ...
 ```
 
-Use paths relative to `__file__` for assets. The renderer outputs H.264 video with yuv420p pixel format for broad compatibility. It accepts 12–60 fps, 1–45 seconds, and frames up to roughly 4 megapixels. There is no stock template: generate the scene for each source. `examples/gapmine/scene.py` shows source quote cards flying into a rotating scoring structure and an evidence card emerging, with captured-source fact binding. `examples/uv/scene.py` shows typography, particles, paths, and background art.
+Use paths relative to `__file__` for assets. The renderer outputs H.264 video with yuv420p pixel format for broad compatibility. It accepts 12–60 fps, 1–45 seconds, and frames up to roughly 4 megapixels.
+
+## Browser canvas scene
+
+`scripts/render_browser.py` opens a **local** HTML file in headless Chromium. The file must contain one `canvas#frame` with exact pixel dimensions and define:
+
+```js
+window.SCENE = {
+  width: 1080,
+  height: 1350,
+  fps: 24,
+  duration: 12,
+  ready: true, // set only after local images and fonts have loaded
+  render(t, facts) { /* draw a deterministic frame on canvas#frame */ }
+};
+```
+
+`facts` is the same map of source-backed fact IDs as in Python. The renderer evaluates `SCENE.render` at each frame time and captures the canvas. Avoid random values inside `render` unless they are seeded and repeatable; build random particles once at load time. Do not load remote scripts, fonts, or images: bundle the assets with the editable scene. Install `requirements-browser.txt` and run `python -m playwright install chromium` once. `scripts/preview_browser.py` captures three frames before a full render.
+
+```bash
+python scripts/preview_browser.py --scene scene.html --facts facts.json --out contact.jpg
+python scripts/render_browser.py --scene scene.html --facts facts.json --audio audio.wav --out video.mp4
+```
+
+The browser renderer enables authored motion fields and spatial compositions; it does not select or generate a concept. The examples under `examples/director-tests/` are distinct case studies, not templates for arbitrary products.
 
 Motion checks to apply during review:
 

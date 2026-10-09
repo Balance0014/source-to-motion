@@ -1,0 +1,100 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'Space Grotesk';src:url('../../../assets/fonts/SpaceGrotesk-Variable.ttf')}
+html,body{padding:0;margin:0;background:#050514;overflow:hidden}canvas{display:block}
+</style></head><body><canvas id="frame" width="1080" height="1350"></canvas>
+<script src="../../../scripts/canvas_core.js"></script><script>
+const cv=document.getElementById('frame'),c=cv.getContext('2d',{alpha:false});
+const W=1080,H=1350,ORANGE=[255,160,90],LILAC=[159,118,255],ICE=[231,234,255];
+const ART=new Image();ART.src='../../../assets/uv-hero.png';
+const rand=M.rnd(3107),nodes=[],edges=[],dust=[];
+for(let k=0;k<155;k++){
+  const ring=1+Math.floor(k/32),q=k*2.39996+rand()*.16;
+  const r=80+ring*84+rand()*94;
+  nodes.push({x:Math.cos(q)*r,y:Math.sin(q)*r*.91,z:rand()*1.2,ring,q,tag:rand(),index:k});
+}
+for(let k=0;k<nodes.length;k++){
+  const j=Math.max(0,k-17-Math.floor(rand()*12));
+  edges.push([k,j,rand()]);
+  if(k>30&&k%3===0) edges.push([k,k-23,rand()]);
+}
+for(let i=0;i<190;i++)dust.push([rand()*W,rand()*H,rand()]);
+function point(n,t){
+  const turn=.05*t,ct=Math.cos(turn),st=Math.sin(turn);
+  const looseX=n.x*ct-n.y*st,looseY=n.x*st+n.y*ct;
+  const slot=n.index%32,q=n.ring*.06+slot*Math.PI*2/32+t*.018;
+  const radius=65+n.ring*72,lockedX=Math.cos(q)*radius,lockedY=Math.sin(q)*radius*.87;
+  const settle=M.phase(t,4.4,8.5);
+  const x=looseX*(1-settle)+lockedX*settle,y=looseY*(1-settle)+lockedY*settle;
+  const zoom=1.28-.35*M.phase(t,0,7)+.16*M.phase(t,8,11);
+  return [W*.50+x*zoom,H*.48+y*zoom,zoom];
+}
+function render(t,f){
+  c.fillStyle='#050511';c.fillRect(0,0,W,H);
+  let g=c.createRadialGradient(530,630,60,530,630,700);
+  g.addColorStop(0,'#21122d');g.addColorStop(.42,'#0e1028');g.addColorStop(1,'#030711');c.fillStyle=g;c.fillRect(0,0,W,H);
+  c.save();c.globalAlpha=.45+.22*M.phase(t,4,8);
+  M.cover(c,ART,W,H,1.07+.10*M.phase(t,2,7),-30*M.phase(t,3,8),-12*M.phase(t,3,8));
+  c.restore();
+  c.fillStyle=`rgba(3,5,16,${.37-.12*M.phase(t,4,8)})`;c.fillRect(0,0,W,H);
+  M.glow(c,520,645,485,LILAC,.75);M.glow(c,520,645,220,ORANGE,.45);
+  for(const d of dust)M.dot(c,d[0]+12*Math.sin(t*.25+d[2]*5),d[1],.5+d[2],ICE,.06+d[2]*.22);
+  c.save();c.beginPath();c.rect(0,178,W,955);c.clip();
+  const lit=M.phase(t,1.2,7.8),settle=M.phase(t,4.4,8.5);
+  for(const [a,b,seed] of edges){
+    const p=point(nodes[a],t),q=point(nodes[b],t),arrival=(a/155)*.86+.12*seed;
+    const active=.10+.90*M.phase(lit,arrival-.12,arrival+.07);
+    M.line(c,p[0],p[1],q[0],q[1],active>.3?ORANGE:LILAC,active>0?1.5+active*1.4:1,(.12+active*.40)*(1-settle));
+    if(active>.1&&settle<.9){
+      const u=(t*.34+seed+a*.11)%1;
+      const x=p[0]+(q[0]-p[0])*u,y=p[1]+(q[1]-p[1])*u;
+      M.glow(c,x,y,24,ORANGE,.4*active*(1-settle));M.dot(c,x,y,2.5,ICE,.85*active*(1-settle));
+    }
+  }
+  for(let i=0;i<nodes.length;i++){
+    const n=nodes[i],sameRing=(i%32===31||i+1>=nodes.length?Math.floor(i/32)*32:i+1),inside=i>=32?i-32:0;
+    const p=point(n,t),q=point(nodes[sameRing],t),v=point(nodes[inside],t);
+    M.line(c,p[0],p[1],q[0],q[1],ORANGE,2.6,.65*settle);
+    if(i>=32)M.line(c,p[0],p[1],v[0],v[1],LILAC,1.8,.40*settle);
+  }
+  for(let i=0;i<nodes.length;i++){
+    const n=nodes[i],p=point(n,t),a=M.phase(lit,i/180,i/180+.18);
+    if(i%11===0){M.glow(c,p[0],p[1],26,a>.4?ORANGE:LILAC,.3+.5*a);}
+    M.dot(c,p[0],p[1],i%11===0?5:2.8,a>.4?ORANGE:LILAC,.25+.68*a);
+  }
+  // An authored lock structure grows only after the graph has visibly resolved.
+  const lock=M.phase(t,5.1,8.5),cx=535,cy=645;
+  M.glow(c,cx,cy,205,ORANGE,.6*lock);
+  for(let j=0;j<4;j++){
+    c.strokeStyle=M.rgba(j%2?LILAC:ORANGE,(.15+.4*lock)/(j*.45+1));c.lineWidth=2+j*.6;
+    c.beginPath();c.arc(cx,cy,72+j*36+10*Math.sin(t*.5+j),t*.18+j,t*.18+j+Math.PI*1.28);c.stroke();
+  }
+  c.save();c.translate(cx,cy);c.rotate(t*.09);c.globalAlpha=lock;
+  for(let z=0;z<2;z++){
+    c.strokeStyle=z?'#ffca84':'#b9a0ff';c.lineWidth=z?4:2;c.beginPath();
+    for(let k=0;k<7;k++){let q=k*Math.PI/3+(z?.13:0),r=z?94:126;
+      const x=r*Math.cos(q),y=r*Math.sin(q);k?c.lineTo(x,y):c.moveTo(x,y)}c.stroke();
+  }
+  c.restore();
+  M.text(c,f.name.display,cx,cy,88,'#fff1e6',700,'center',M.phase(t,6,8.5));
+  c.restore();
+  // Typography is placed on the graph's own horizon, not a reusable HUD grid.
+  M.box(c,33,31,1014,126,'rgba(3,5,17,.70)','rgba(179,139,255,.38)',16,2);
+  M.text(c,f.name.display,62,86,64,'#faf8ff',700);
+  M.text(c,f.hero.display,1014,89,24,'#c5baff',600,'right');
+  M.text(c,'01  /  '+f.input.display,72,225,24,'#c6afff',600,'left',1-M.phase(t,4,5));
+  M.text(c,'02  /  '+f.transform.display,70,1024,43,'#ffcf95',700,'left',M.phase(t,4.3,5.2));
+  const bottom=M.phase(t,5.8,6.7);
+  if(bottom>.01){
+    M.box(c,35,1123,1010,154,M.rgba([7,8,24],.88*bottom),M.rgba(ORANGE,.48*bottom),17,2);
+    const claim=M.phase(t,8.6,9.6);
+    M.text(c,f.detail_3.display,65,1172,39,'#ffffff',700,'left',M.phase(t,6.2,7)*(1-claim));
+    M.text(c,f.detail_4.display,65,1234,30,'#cabaff',600,'left',M.phase(t,7.6,8.4)*(1-claim));
+    M.text(c,f.metric.display,65,1181,61,'#ffd38e',700,'left',claim);
+    M.text(c,f.caveat.display,67,1240,26,'#f2ded0',600,'left',claim);
+  }
+  M.text(c,'ILLUSTRATIVE DEPENDENCY GRAPH  ·  README + DATED SNAPSHOT',49,1314,17,'#8e88ae',500);
+  M.vignette(c,W,H,.34);
+}
+window.SCENE={width:W,height:H,fps:24,duration:12,ready:false,render};
+Promise.all([document.fonts.ready,new Promise(r=>ART.onload=r)]).then(()=>{SCENE.ready=true;});
+</script></body></html>

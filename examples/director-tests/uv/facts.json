@@ -1,0 +1,104 @@
+{
+  "source": "https://github.com/astral-sh/uv",
+  "source_language": "en",
+  "output_language": "en",
+  "snapshot_at_utc": "2026-10-08T15:47:11.178293+00:00",
+  "facts": [
+    {
+      "id": "name",
+      "display": "uv",
+      "evidence": "# uv",
+      "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/README.md"
+    },
+    {
+      "id": "hero",
+      "display": "PYTHON PACKAGE + PROJECT MANAGER",
+      "evidence": "An extremely fast Python package and project manager, written in Rust.",
+      "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/README.md"
+    },
+    {
+      "id": "input",
+      "display": "PYTHON PACKAGES",
+      "evidence": "A single tool to replace `pip`, `pip-tools`, `pipx`, `poetry`, `pyenv`, `twine`, `virtualenv`, and\nmore.",
+      "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/README.md"
+    },
+    {
+      "id": "transform",
+      "display": "UNIVERSAL LOCKFILE",
+      "evidence": "universal lockfile",
+      "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/README.md"
+    },
+    {
+      "id": "result",
+      "display": "RUN SCRIPTS",
+      "evidence": "Runs scripts",
+      "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/README.md"
+    },
+    {
+      "id": "metric",
+      "display": "10–100× VS PIP",
+      "evidence": "- [10-100x faster](https://github.com/astral-sh/uv/blob/main/BENCHMARKS.md) than `pip`.",
+      "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/README.md"
+    },
+    {
+      "id": "caveat",
+      "display": "BENCHMARK CONDITIONS APPLY",
+      "evidence": "Benchmark performance may vary dramatically across different operating systems and filesystems.",
+      "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/BENCHMARKS.md"
+    },
+    {
+      "id": "detail_1",
+      "display": "uv init example",
+      "evidence": "uv init example",
+      "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/README.md"
+    },
+    {
+      "id": "detail_2",
+      "display": "UNIVERSAL LOCKFILE",
+      "evidence": "universal lockfile",
+      "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/README.md"
+    },
+    {
+      "id": "detail_3",
+      "display": "uv sync",
+      "evidence": "$ uv sync",
+      "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/README.md"
+    },
+    {
+      "id": "detail_4",
+      "display": "uv run example.py",
+      "evidence": "$ uv run example.py",
+      "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/README.md"
+    },
+    {
+      "id": "detail_5",
+      "display": "PYTHON VERSIONS",
+      "evidence": "Python versions.",
+      "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/README.md"
+    },
+    {
+      "id": "detail_6",
+      "display": "GLOBAL CACHE",
+      "evidence": "global cache",
+      "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/README.md"
+    },
+    {
+      "id": "snapshot_date",
+      "display": "2026-10-08 UTC",
+      "evidence": "GitHub API captured: 2026-10-08 UTC",
+      "locator": "https://api.github.com/repos/astral-sh/uv"
+    },
+    {
+      "id": "stars",
+      "display": "90,501",
+      "evidence": "stargazers_count: 90,501",
+      "locator": "https://api.github.com/repos/astral-sh/uv"
+    },
+    {
+      "id": "forks",
+      "display": "3,635",
+      "evidence": "forks_count: 3,635",
+      "locator": "https://api.github.com/repos/astral-sh/uv"
+    }
+  ]
+}

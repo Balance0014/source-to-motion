@@ -6,7 +6,7 @@ The repository's Python scripts run on your machine. They do not include telemet
 
 Your AI agent and any optional image-generation tool may use their own online services under your account. Review those tools' data settings before feeding them private material. Treat `source.json`, `facts.json`, and generated scenes as potentially sensitive: they can contain excerpts, file paths, or internal product claims. Do not commit private outputs to a public repository.
 
-The checked-in examples use the public GapMine homepage, six public GitHub repositories, and a clearly fictional Pulse Atlas brief. They do not include private customer documents, credentials, or unpublished product data.
+The checked-in examples use the public GapMine homepage, six public GitHub repositories (including the newer uv, DuckDB, and Tailscale case studies), and a clearly fictional Pulse Atlas brief. The optional browser renderer opens a local authored scene and performs local video capture. These examples do not include private customer documents, credentials, or unpublished product data.
 
 ## 简体中文
 
@@ -14,4 +14,4 @@ The checked-in examples use the public GapMine homepage, six public GitHub repos
 
 你自己的 Codex 和可选的图片生成工具可能使用其账户下的在线服务。处理私人资料前，请按你使用的工具检查其数据设置。`source.json`、`facts.json` 和生成场景可能包含原文、文件路径或内部数字，**不要把私人输出提交到公开仓库**。
 
-仓库内的样例只使用 GapMine 公开首页、六个公开 GitHub 仓库和明确标为虚构的 Pulse Atlas 简报，没有上传私人客户文档、凭据或未公开产品数据。
+仓库内的样例只使用 GapMine 公开首页、六个公开 GitHub 仓库（新版案例包括 uv、DuckDB、Tailscale）和明确标为虚构的 Pulse Atlas 简报。可选的浏览器渲染器只打开本地编写的场景并在本地录制视频。这些案例没有上传私人客户文档、凭据或未公开产品数据。

@@ -1,0 +1,103 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'Space Grotesk';src:url('../../../assets/fonts/SpaceGrotesk-Variable.ttf')}
+html,body{padding:0;margin:0;background:#020d16;overflow:hidden}canvas{display:block}
+</style></head><body><canvas id="frame" width="1080" height="1350"></canvas>
+<script src="../../../scripts/canvas_core.js"></script><script>
+const cv=document.getElementById('frame'),c=cv.getContext('2d',{alpha:false});
+const W=1080,H=1350,MINT=[105,255,220],BLUE=[94,161,255],WHITE=[235,253,250];
+const ART=new Image();ART.src='../../../assets/tailscale-space-v2.png';
+const rand=M.rnd(2911),stars=[],nebula=[];
+for(let i=0;i<940;i++)stars.push({x:(rand()-.5)*5.2,y:(rand()-.5)*6.4,z:.45+rand()*5.4,r:rand()});
+for(let i=0;i<1500;i++){
+  const q=i*2.39996+(.12*Math.sin(i*.011)),r=25+rand()*520;
+  nebula.push({x:Math.cos(q)*r,y:Math.sin(q)*r*.33,d:rand()});
+}
+const devices=[
+  {x:-1.60,y:-1.42,z:1.0},
+  {x:1.77,y:-1.28,z:1.35},
+  {x:-1.91,y:.42,z:.55},
+  {x:1.67,y:.88,z:.6},
+  {x:.0,y:1.68,z:1.4},
+];
+const links=[[0,1],[0,2],[0,4],[1,3],[1,4],[2,3],[2,4],[3,4]];
+function project(p,t,parallax=1){
+  const yaw=.08*Math.sin(t*.32),ct=Math.cos(yaw),st=Math.sin(yaw);
+  const x=p.x*ct-p.z*st,z=p.x*st+p.z*ct+3.3-.55*M.phase(t,3,8);
+  const scale=parallax*840/z;
+  return [540+x*scale,658+p.y*scale,z];
+}
+function render(t,f){
+  c.fillStyle='#020914';c.fillRect(0,0,W,H);
+  let bg=c.createRadialGradient(555,670,70,555,670,880);
+  bg.addColorStop(0,'#143a47');bg.addColorStop(.36,'#071a2a');bg.addColorStop(1,'#020610');c.fillStyle=bg;c.fillRect(0,0,W,H);
+  c.save();c.globalAlpha=.52;
+  M.cover(c,ART,W,H,1.09+.05*M.phase(t,2,8)+.10*M.phase(t,7.5,10.5),-18*M.phase(t,3,8),12*M.phase(t,3,8));
+  c.restore();
+  c.fillStyle='rgba(2,9,20,.37)';c.fillRect(0,0,W,H);
+  M.glow(c,520,680,660,MINT,.42);M.glow(c,650,520,540,BLUE,.32);
+  c.save();c.beginPath();c.rect(0,190,W,1000);c.clip();
+  // The camera passes a layered star field while a private device mesh forms.
+  const fly=24*M.phase(t,1,4);
+  for(const s of stars){
+    let z=s.z-((t*.095+s.r*.03)%5.2);if(z<.43)z+=5.2;
+    const x=540+s.x*390/z,y=670+s.y*390/z;
+    if(x<0||x>W||y<150||y>1190)continue;
+    const a=.08+.43*(1-z/5.8);
+    M.dot(c,x,y,.4+s.r*1.1+(1-z/5.8)*1.5,WHITE,a);
+    if(s.r>.93){M.line(c,x,y,x+(x-540)*.022,y+(y-670)*.022,BLUE,1,a*.8)}
+  }
+  c.save();c.translate(540,652);c.rotate(-.22+.08*Math.sin(t*.16));
+  M.glow(c,0,0,480,MINT,.78);
+  for(let k=0;k<5;k++){
+    c.beginPath();c.ellipse(0,0,330+k*54,91+k*18,-.15,0,Math.PI*2);
+    c.strokeStyle=M.rgba(k%2?BLUE:MINT,.14+.07*Math.sin(t*.7+k));c.lineWidth=3;c.stroke();
+  }
+  for(const p of nebula){
+    const a=.16+p.d*.56,x=p.x+12*Math.sin(t*.34+p.d*5),y=p.y;
+    M.dot(c,x,y,.5+p.d*2.2,p.d>.45?MINT:BLUE,a);
+  }
+  c.restore();
+  const connect=M.phase(t,2.0,7.0),pts=devices.map(p=>project(p,t));
+  for(const cue of [5.2,8.2]){
+    const u=(t-cue)/1.7;
+    if(u>0&&u<1){
+      c.beginPath();c.ellipse(540,658,80+520*M.ease(u),35+245*M.ease(u),-.23,0,Math.PI*2);
+      c.strokeStyle=M.rgba(MINT,.52*(1-u));c.lineWidth=4;c.stroke();
+    }
+  }
+  for(let i=0;i<links.length;i++){
+    const [a,b]=links[i],p=pts[a],q=pts[b],active=M.phase(connect,i*.095-.11,i*.095+.2);
+    M.line(c,p[0],p[1],q[0],q[1],MINT,2,.08+.70*active);
+    if(active>.05){
+      const u=(t*.25+i*.17)%1;
+      const x=p[0]+(q[0]-p[0])*u,y=p[1]+(q[1]-p[1])*u;
+      M.glow(c,x,y,42,MINT,.5*active);M.dot(c,x,y,3.7,WHITE,.8*active);
+    }
+  }
+  const deviceLabels=f.detail_5.display.split(' + ').concat(f.detail_6.display.split(' + '));
+  devices.forEach((d,i)=>{
+    const p=pts[i],a=M.phase(t,.3+i*.18,1.5+i*.18);
+    M.glow(c,p[0],p[1],93,i%2?BLUE:MINT,.5*a);
+    c.beginPath();c.arc(p[0],p[1],20,0,Math.PI*2);c.strokeStyle=M.rgba(MINT,.9*a);c.lineWidth=2.6;c.stroke();
+    M.dot(c,p[0],p[1],7,WHITE,a);
+    M.line(c,p[0]+20,p[1],p[0]+45,p[1]-27,MINT,1.5,.5*a);
+    M.text(c,deviceLabels[i]||'',p[0]+52,p[1]-31,20,'#c9fff0',600,'left',a);
+  });
+  c.restore();
+  M.text(c,f.name.display,58,80,70,'#e9fff9',700);
+  M.text(c,f.hero.display,61,147,28,'#a7f9e3',600);
+  M.line(c,60,187,1016,187,MINT,2,.38);
+  M.text(c,f.input.display,1015,148,29,'#dafff4',700,'right',1-M.phase(t,2.2,3.1));
+  M.text(c,f.result.display,1015,148,29,'#dafff4',700,'right',M.phase(t,3.3,4.2));
+  // A panoramic caption replaces the old four-sided analytics frame.
+  let strip=c.createLinearGradient(0,1100,0,1350);
+  strip.addColorStop(0,'rgba(2,9,19,0)');strip.addColorStop(.3,'rgba(2,9,19,.76)');strip.addColorStop(1,'rgba(2,9,19,.98)');
+  c.fillStyle=strip;c.fillRect(0,1080,W,270);
+  M.text(c,f.detail_3.display,63,1181,34,'#c4ffe8',700,'left',M.phase(t,3.2,4));
+  M.text(c,f.detail_4.display,62,1232,26,'#83bac7',600,'left',M.phase(t,6.4,7.2));
+  M.text(c,'ILLUSTRATIVE PRIVATE MESH · NOT A LIVE TOPOLOGY',60,1318,17,'#7399a6',500);
+  M.vignette(c,W,H,.38);
+}
+window.SCENE={width:W,height:H,fps:24,duration:12,ready:false,render};
+Promise.all([document.fonts.ready,new Promise(r=>ART.onload=r)]).then(()=>{SCENE.ready=true;});
+</script></body></html>

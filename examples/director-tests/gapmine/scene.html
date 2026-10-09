@@ -1,0 +1,92 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'Space Grotesk';src:url('../../../assets/fonts/SpaceGrotesk-Variable.ttf')}
+html,body{padding:0;margin:0;background:#030811;overflow:hidden}canvas{display:block}
+</style></head><body><canvas id="frame" width="1080" height="1350"></canvas>
+<script src="../../../scripts/canvas_core.js"></script><script>
+const cv=document.getElementById('frame'),c=cv.getContext('2d',{alpha:false});
+const DARK=new Image(),LIT=new Image();
+DARK.src='../../../assets/gapmine-market-dark.png';LIT.src='../../../assets/gapmine-market-lit.png';
+const W=1080,H=1350,CYAN=[75,220,247],GOLD=[255,190,75],WHITE=[238,250,254];
+const rand=M.rnd(6582),signals=[];
+for(let i=0;i<290;i++)signals.push({side:i%2,sy:rand(),delay:rand(),bend:rand(),speed:rand(),group:i%5});
+function render(t,f){
+  c.fillStyle='#030811';c.fillRect(0,0,W,H);
+  const zoom=1.07+.12*M.phase(t,2.0,6.0)-.09*M.phase(t,10,14);
+  const yoff=19-55*M.phase(t,3,6)+42*M.phase(t,10,13);
+  M.cover(c,DARK,W,H,zoom,0,yoff);
+  // The authored terrain itself contains the gap. A wide illumination sweep
+  // preserves its natural edges while the foreground evidence remains mobile.
+  const awaken=M.phase(t,2.1,8.8);
+  c.save();c.globalAlpha=awaken;M.cover(c,LIT,W,H,zoom,0,yoff);c.restore();
+  const sweep=M.phase(t,2.6,8.7);
+  M.glow(c,524,205+655*sweep,190+125*awaken,GOLD,.12+.50*awaken);
+  let shade=c.createLinearGradient(0,0,0,1350);
+  shade.addColorStop(0,'rgba(2,8,17,.86)');shade.addColorStop(.21,'rgba(2,8,17,.05)');
+  shade.addColorStop(.72,'rgba(2,8,17,.15)');shade.addColorStop(1,'rgba(2,8,17,.91)');
+  c.fillStyle=shade;c.fillRect(0,0,W,H);
+  c.save();c.beginPath();c.rect(0,174,W,955);c.clip();
+  // Three kinds of source evidence arrive as moving threads, not fake charts.
+  const converge=M.phase(t,.7,7.8);
+  for(let i=0;i<signals.length;i++){
+    const s=signals[i],u=(t*(.16+s.speed*.06)+s.delay)%1;
+    const x0=s.side?1100:-20,y0=260+s.sy*650;
+    const qx=512+(s.group-2)*17,qy=585+(s.group-2)*29;
+    const bend=70+90*s.bend;
+    const point=v=>{
+      const x=x0+(qx-x0)*v;
+      const y=y0+(qy-y0)*v+bend*Math.sin(Math.PI*v)*(s.side?1:-1);
+      return [x,y];
+    };
+    const p=point(Math.max(0,u-.065)),q=point(u),col=i%9===0?GOLD:CYAN;
+    M.line(c,p[0],p[1],q[0],q[1],col,1.3+s.speed*1.3,(.07+.52*converge)*(.4+.6*s.speed));
+    if(i%5===0){M.glow(c,q[0],q[1],21,col,.13+.25*converge);M.dot(c,q[0],q[1],2,WHITE,.3+.6*converge)}
+  }
+  // The five verified scoring dimensions settle around the actual discovery.
+  const score=M.phase(t,6.0,9.3),names=f.five_signals.display.split('  ·  ');
+  for(let k=0;k<5;k++){
+    const active=M.phase(t,5.7+k*.47,6.6+k*.47);
+    const q=-Math.PI*.5+k*Math.PI*2/5+t*.025,rx=207,ry=197;
+    const x=524+rx*Math.cos(q),y=613+ry*Math.sin(q);
+    M.line(c,524,613,x,y,GOLD,1,.25*active);
+    M.glow(c,x,y,42,GOLD,.5*active);M.dot(c,x,y,5,GOLD,active);
+    if(active>.1){
+      const txt=names[k]||'',left=x<524,tx=x+(left?-19:19);
+      c.font='700 25px Space Grotesk';const tw=c.measureText(txt).width+30;
+      M.box(c,left?tx-tw:tx-9,y-30,tw,37,M.rgba([2,12,24],.72*active),null,7);
+      M.text(c,txt,tx,y-12,25,'#ffe0a1',700,left?'right':'left',active);
+    }
+  }
+  for(let k=0;k<3;k++){
+    c.beginPath();c.ellipse(524,613,95+k*46,94+k*40,t*.035+k*.08,0,Math.PI*2);
+    c.strokeStyle=M.rgba(k%2?CYAN:GOLD,(.08+.15*score)/(k*.35+1));c.lineWidth=2;c.stroke();
+  }
+  const pulse=Math.max(0,1-Math.abs(t-9.4)/1.2);
+  M.glow(c,524,615,240,GOLD,.32+.60*pulse);
+  c.restore();
+  // Editorial captions emerge where the evidence is being processed.
+  M.text(c,f.name.display,43,75,64,'#f4fdff',700);
+  M.text(c,f.promise.display,46,136,25,'#a0e7f7',600);
+  M.text(c,f.source_types.display,47,222,23,'#e1f6f9',600,'left',1-M.phase(t,5.5,7));
+  M.text(c,f.signals.display,49,347,53,'#ffffff',700,'left',M.phase(t,1,2));
+  M.text(c,f.signals_label.display,50,394,20,'#abedfd',600,'left',M.phase(t,1,2));
+  M.text(c,f.communities.display,827,349,53,'#ffffff',700,'left',M.phase(t,2,3));
+  M.text(c,f.communities_label.display,828,396,20,'#abedfd',600,'left',M.phase(t,2,3));
+  // Final candidate is a source-linked product example; no invented score.
+  const reveal=M.phase(t,9.5,11.0);
+  if(reveal>.001){
+    const rise=52*(1-reveal);
+    M.box(c,34,1010+rise,1012,234,M.rgba([2,12,24],.91*reveal),M.rgba(GOLD,.75*reveal),20,2);
+    M.text(c,f.top_pick.display,64,1051+rise,20,'#ffc872',700,'left',reveal);
+    M.text(c,f.top_title.display,62,1114+rise,36,'#fff9ee',700,'left',reveal);
+    M.text(c,f.validated.display+'  /  '+f.top_posts.display+'  /  '+f.top_people.display,65,1178+rise,25,'#bbebee',600,'left',reveal);
+  } else {
+    M.text(c,f.real_signals.display,44,1090,42,'#f2fcff',700);
+    M.text(c,f.five_label.display,45,1143,24,'#ffd395',600,'left',M.phase(t,5.5,6.5));
+  }
+  M.text(c,f.cards.display+' '+f.cards_label.display,45,1306,23,'#c7e9ef',600);
+  M.text(c,f.snapshot.display,1033,1306,17,'#94aeba',500,'right');
+  M.vignette(c,W,H,.25);
+}
+window.SCENE={width:W,height:H,fps:24,duration:16,ready:false,render};
+Promise.all([document.fonts.ready,new Promise(r=>DARK.onload=r),new Promise(r=>LIT.onload=r)]).then(()=>{SCENE.ready=true;});
+</script></body></html>

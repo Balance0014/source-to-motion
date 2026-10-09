@@ -1,0 +1,140 @@
+{
+  "source": "https://gapmine.com/",
+  "source_language": "en",
+  "output_language": "en",
+  "snapshot_at_utc": "2026-10-08T09:43:14+00:00",
+  "facts": [
+    {
+      "id": "name",
+      "display": "GAPMINE",
+      "evidence": "Today's top market gaps — GapMine",
+      "locator": "gapmine.com homepage title, captured 2026-10-08 09:43 UTC"
+    },
+    {
+      "id": "promise",
+      "display": "FIND WHAT BUILDERS ARE ABOUT TO BUILD.",
+      "evidence": "Find what builders are about to build.",
+      "locator": "gapmine.com homepage hero, captured 2026-10-08 09:43 UTC"
+    },
+    {
+      "id": "signals",
+      "display": "101,081",
+      "evidence": "101,081 Builder signals analyzed",
+      "locator": "gapmine.com homepage hero counter, captured 2026-10-08 09:43 UTC"
+    },
+    {
+      "id": "signals_label",
+      "display": "BUILDER SIGNALS ANALYZED",
+      "evidence": "Builder signals analyzed",
+      "locator": "gapmine.com homepage hero counter"
+    },
+    {
+      "id": "cards",
+      "display": "1,140",
+      "evidence": "1140 Opportunity cards",
+      "locator": "gapmine.com homepage hero counter, captured 2026-10-08 09:43 UTC"
+    },
+    {
+      "id": "cards_label",
+      "display": "OPPORTUNITY CARDS",
+      "evidence": "Opportunity cards",
+      "locator": "gapmine.com homepage hero counter"
+    },
+    {
+      "id": "communities",
+      "display": "124",
+      "evidence": "124 Builder communities",
+      "locator": "gapmine.com homepage hero counter, captured 2026-10-08 09:43 UTC"
+    },
+    {
+      "id": "communities_label",
+      "display": "BUILDER COMMUNITIES",
+      "evidence": "Builder communities",
+      "locator": "gapmine.com homepage hero counter"
+    },
+    {
+      "id": "tagline",
+      "display": "STOP GUESSING WHAT TO BUILD.",
+      "evidence": "Stop guessing what to build.",
+      "locator": "gapmine.com homepage closing section"
+    },
+    {
+      "id": "snapshot",
+      "display": "SNAPSHOT 08 OCT 2026",
+      "evidence": "Snapshot captured at 2026-10-08T09:43:14+00:00.",
+      "locator": "source.json extraction metadata"
+    },
+    {
+      "id": "real_signals",
+      "display": "REAL SIGNALS, NOT VIBES",
+      "evidence": "Real signals, not vibes",
+      "locator": "gapmine.com Built different section"
+    },
+    {
+      "id": "source_types",
+      "display": "BUILDER POSTS  /  GITHUB ISSUES  /  PRODUCT REVIEWS",
+      "evidence": "Every gap is sourced from a real builder post, GitHub issue, or product review",
+      "locator": "gapmine.com Built different section"
+    },
+    {
+      "id": "five_signals",
+      "display": "PAIN  ·  DEMAND  ·  SUPPLY  ·  TRIGGER  ·  PAY",
+      "evidence": "Pain · Demand · Supply · Trigger · Pay",
+      "locator": "gapmine.com Built different section"
+    },
+    {
+      "id": "five_label",
+      "display": "5-SIGNAL MODEL",
+      "evidence": "Our 5-signal model",
+      "locator": "gapmine.com Built different section"
+    },
+    {
+      "id": "top_pick",
+      "display": "TODAY'S TOP PICK",
+      "evidence": "Today's top pick",
+      "locator": "gapmine.com homepage featured gap"
+    },
+    {
+      "id": "top_title",
+      "display": "TIKTOK SHOP VIDEO MONETIZATION",
+      "evidence": "TikTok Shop Video Monetization",
+      "locator": "gapmine.com homepage featured gap"
+    },
+    {
+      "id": "validated",
+      "display": "VALIDATED",
+      "evidence": "Validated",
+      "locator": "gapmine.com homepage featured gap"
+    },
+    {
+      "id": "top_posts",
+      "display": "7 BUILDER POSTS ASKING",
+      "evidence": "7 builder posts asking",
+      "locator": "gapmine.com homepage featured gap"
+    },
+    {
+      "id": "top_people",
+      "display": "6 PEOPLE ASKING",
+      "evidence": "6 people asking",
+      "locator": "gapmine.com homepage featured gap"
+    },
+    {
+      "id": "workflow",
+      "display": "LISTEN  /  SCORE  /  DELIVER",
+      "evidence": "Listen We track 1,225 builder conversations a day across Reddit, Hacker News, GitHub, Product Hunt, Bluesky, and indie founder discords. STEP 2 Score Each gap is graded on 5 signals — pain, demand, supply, trigger, willingness to pay — and ranked by build likelihood. STEP 3 Deliver",
+      "locator": "gapmine.com homepage How it works section"
+    },
+    {
+      "id": "quote_monetise",
+      "display": "How Would You Monetise?",
+      "evidence": "How Would You Monetise?",
+      "locator": "gapmine.com homepage featured gap, More in their words"
+    },
+    {
+      "id": "quote_conversion",
+      "display": "extra step may kill conversions",
+      "evidence": "extra step may kill conversions",
+      "locator": "gapmine.com homepage featured gap, What they tried & dropped"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "source": "https://github.com/astral-sh/uv",
+  "locator": "https://raw.githubusercontent.com/astral-sh/uv/4b542cf96fc37aebe4d7686ac9892be4a03dfeb0/README.md",
+  "kind": "github-readme",
+  "ocr": false,
+  "retrieved_at_utc": "2026-10-08T14:31:30+00:00",
+  "text": "# uv\nAn extremely fast Python package and project manager, written in Rust.\nA single tool to replace `pip`, `pip-tools`, `pipx`, `poetry`, `pyenv`, `twine`, `virtualenv`, and\nmore.\nuniversal lockfile\nRuns scripts\n10-100x faster\nBenchmark performance may vary dramatically across different operating systems and filesystems.\nuv init example\nuniversal lockfile\n$ uv sync\n$ uv run example.py\nPython versions.\nglobal cache\nGitHub API captured: 2026-10-08 UTC\nstargazers_count: 90,501\nforks_count: 3,635\n- [10-100x faster](https://github.com/astral-sh/uv/blob/main/BENCHMARKS.md) than `pip`.",
+  "github_snapshot": {
+    "stars": 90501,
+    "forks": 3635,
+    "captured_at_utc": "2026-10-08T15:47:11.178293+00:00",
+    "url": "https://api.github.com/repos/astral-sh/uv"
+  }
+}
