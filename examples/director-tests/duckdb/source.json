@@ -1,0 +1,14 @@
+{
+  "source": "https://github.com/duckdb/duckdb",
+  "locator": "https://raw.githubusercontent.com/duckdb/duckdb/d4c9dfd469f25b217c6fa6090dae3f4899feb5cc/README.md",
+  "kind": "github-readme",
+  "ocr": false,
+  "retrieved_at_utc": "2026-10-08T14:31:42+00:00",
+  "text": "## DuckDB\nDuckDB is a high-performance analytical database system.\nFor CSV files and Parquet files, data import is as simple as referencing the file in the FROM clause:\nSELECT * FROM\nSELECT * FROM 'myfile.parquet';\nFor CSV files and Parquet files\nFor CSV files and Parquet files\nSELECT * FROM 'myfile.csv';\nSELECT * FROM 'myfile.parquet';\nwindow functions\nclients for [Python]\nGitHub API captured: 2026-10-08 UTC\nstargazers_count: 41,986\nforks_count: 3,882\nhas clients for [Python](https://duckdb.org/docs/current/clients/python/overview), [R](https://duckdb.org/docs/current/clients/r), [Java](https://duckdb.org/docs/current/clients/java), [Wasm](https://duckdb.org/docs/current/clients/wasm/overview), etc., with deep integrations",
+  "github_snapshot": {
+    "stars": 41986,
+    "forks": 3882,
+    "captured_at_utc": "2026-10-08T15:47:11.694816+00:00",
+    "url": "https://api.github.com/repos/duckdb/duckdb"
+  }
+}

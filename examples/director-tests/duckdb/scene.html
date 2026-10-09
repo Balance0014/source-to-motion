@@ -1,0 +1,104 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'Space Grotesk';src:url('../../../assets/fonts/SpaceGrotesk-Variable.ttf')}
+html,body{padding:0;margin:0;background:#050d19;overflow:hidden}canvas{display:block}
+</style></head><body><canvas id="frame" width="1080" height="1350"></canvas>
+<script src="../../../scripts/canvas_core.js"></script><script>
+const cv=document.getElementById('frame'),c=cv.getContext('2d',{alpha:false});
+const W=1080,H=1350,GOLD=[255,194,78],BLUE=[76,187,248],WHITE=[238,248,255];
+const ART=new Image();ART.src='../../../assets/duckdb-hero.png';
+const rand=M.rnd(8317),streams=[];
+for(let i=0;i<430;i++)streams.push({seed:rand(),row:rand(),depth:rand(),side:rand(),size:rand()});
+function bezier(p0,p1,p2,p3,u){let v=1-u;return v*v*v*p0+3*v*v*u*p1+3*v*u*u*p2+u*u*u*p3}
+function path(s,t,u){
+  const y0=290+s.row*800,angle=12*Math.sin(t*.7+s.seed*17),mid=620+(s.row-.5)*220;
+  const x=bezier(-160,270+s.depth*90,520,940,u);
+  const y=bezier(y0,mid+angle,570+angle,350+s.row*605,u);
+  return [x,y];
+}
+function render(t,f){
+  c.fillStyle='#07101b';c.fillRect(0,0,W,H);
+  const g=c.createLinearGradient(0,0,1080,1350);
+  g.addColorStop(0,'#07101d');g.addColorStop(.46,'#111c2a');g.addColorStop(1,'#03080f');c.fillStyle=g;c.fillRect(0,0,W,H);
+  c.save();c.globalAlpha=.44+.16*M.phase(t,2,8);
+  M.cover(c,ART,W,H,1.12+.06*M.phase(t,2,7),-27*M.phase(t,1,7),0);
+  c.restore();
+  c.fillStyle='rgba(3,9,20,.35)';c.fillRect(0,0,W,H);
+  M.glow(c,545,654,590,GOLD,.50);M.glow(c,280,470,350,BLUE,.32);
+  // Perspective floor bends upward into the query plane.
+  for(let i=-16;i<=16;i++){
+    const x=540+i*110;
+    M.line(c,540,690,x,1300,BLUE,1,.07);
+  }
+  for(let y=730;y<1330;y+=55){
+    const p=(y-690)/660;
+    M.line(c,0,y,1080,y,BLUE,1,.03+p*.10);
+  }
+  c.save();c.beginPath();c.rect(0,190,W,970);c.clip();
+  const gather=M.phase(t,1.7,5.6),output=M.phase(t,6.0,8.8);
+  // Hundreds of independently moving file fragments follow a continuous field.
+  for(let i=0;i<streams.length;i++){
+    const s=streams[i];
+    const u=((t*.105+s.seed*1.6+i*.017)%1);
+    const a=path(s,t,Math.max(0,u-.027)),b=path(s,t,u);
+    const alpha=(.10+s.depth*.28)*(.34+.66*gather);
+    M.line(c,a[0],a[1],b[0],b[1],i%6?BLUE:GOLD,1+s.size*1.7,alpha);
+    if(i%6===0)M.dot(c,b[0],b[1],1.2+s.size*1.5,WHITE,.18+.55*gather);
+  }
+  // Broad, moving streams make the input-to-query action legible on a phone.
+  for(let k=0;k<7;k++){
+    const progress=M.phase(t,.15+k*.27,2.6+k*.27);
+    if(progress<=0)continue;
+    const y0=305+k*100,cy=540+(k-3)*23;
+    const pts=[];
+    for(let j=0;j<=32;j++){
+      const u=progress*j/32;
+      const x=-40+575*u;
+      const y=y0+(cy-y0)*u+38*Math.sin(Math.PI*u+t*.38+k);
+      pts.push([x,y]);
+    }
+    c.beginPath();pts.forEach((p,j)=>j?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]));
+    c.strokeStyle=M.rgba(k%2?GOLD:BLUE,.18+.21*progress);c.lineWidth=8;c.stroke();
+    c.strokeStyle=M.rgba(WHITE,.20+.40*progress);c.lineWidth=2.1;c.stroke();
+    const head=pts[pts.length-1];M.glow(c,head[0],head[1],48,k%2?GOLD:BLUE,.6*progress);
+  }
+  // The query plane is a physical aperture, not a static chart card.
+  M.glow(c,547,634,290,GOLD,.55+.42*gather);
+  let beam=c.createLinearGradient(478,0,618,0);
+  beam.addColorStop(0,'rgba(255,177,59,0)');beam.addColorStop(.45,`rgba(255,193,73,${.09+.13*gather})`);
+  beam.addColorStop(.50,`rgba(255,245,194,${.40+.25*gather})`);
+  beam.addColorStop(.55,`rgba(255,193,73,${.09+.13*gather})`);beam.addColorStop(1,'rgba(255,177,59,0)');
+  c.fillStyle=beam;c.fillRect(467,196,160,876);
+  for(let j=0;j<4;j++){
+    const x=515+j*20;
+    M.line(c,x,260+j*43,x,1050-j*26,j%2?BLUE:GOLD,2,.22+.45*gather);
+  }
+  // Past the aperture, the same fragments become organized parallel rows.
+  c.save();c.globalAlpha=output;
+  c.setTransform(1,.10,-.24,1,180,-115);
+  for(let r=0;r<14;r++){
+    const y=390+r*41;
+    M.line(c,670,y,1140,y,BLUE,1.2,.28+.15*Math.sin(t*1.1+r));
+    for(let col=0;col<5;col++){
+      const x=683+col*92,active=M.phase(t,6+r*.12+col*.07,7.1+r*.12+col*.07);
+      M.box(c,x,y+7,62,17,M.rgba(col%2?GOLD:BLUE,.13+.45*active),null,2);
+    }
+  }
+  c.setTransform(1,0,0,1,0,0);c.restore();
+  c.restore();
+  // The sparse editorial layout is deliberately unlike the graph scene.
+  M.text(c,f.name.display,54,83,72,'#fff9e9',700);
+  M.text(c,f.hero.display,57,140,25,'#88b8ce',600);
+  M.line(c,52,175,1027,175,GOLD,3,.55);
+  M.text(c,f.detail_1.display,61,370,30,'#8dd9ff',700,'left',1-M.phase(t,5.5,6.5));
+  M.text(c,f.detail_2.display,61,418,30,'#8dd9ff',700,'left',1-M.phase(t,5.5,6.5));
+  M.text(c,f.transform.display,530,566,57,'#fff2cf',700,'center',M.phase(t,2.3,3.5));
+  M.box(c,48,1082,983,192,'rgba(3,10,20,.86)','rgba(255,207,104,.42)',18,2);
+  M.text(c,f.detail_3.display,77,1131,36,'#ffe5a5',700,'left',1-M.phase(t,2.6,3.5));
+  M.text(c,f.detail_4.display,77,1131,36,'#ffe5a5',700,'left',M.phase(t,3,4));
+  M.text(c,f.result.display,78,1208,31,'#e9f4ff',600,'left',M.phase(t,7,8));
+  M.text(c,'ILLUSTRATIVE FILE FLOW · NO QUERY RESULT VALUES SHOWN',52,1316,17,'#8b9aaa',500);
+  M.vignette(c,W,H,.38);
+}
+window.SCENE={width:W,height:H,fps:24,duration:12,ready:false,render};
+Promise.all([document.fonts.ready,new Promise(r=>ART.onload=r)]).then(()=>{SCENE.ready=true;});
+</script></body></html>

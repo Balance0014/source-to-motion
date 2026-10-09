@@ -4,15 +4,15 @@
 
 **Turn a project link or document into a short, original motion video. Keep the numbers honest.**
 
-[![GapMine cinematic signal-field video poster](media/gapmine-poster.jpg)](examples/gapmine/preview.mp4)
+[![Four content-directed vertical films: uv, DuckDB, Tailscale, and GapMine](media/director-grid.jpg)](examples/director-tests/README.md)
 
-[Watch GapMine](examples/gapmine/preview.mp4) · [Six GitHub stress-test films](examples/SHOWCASE.md) · [看中文仪表盘](examples/pulse-atlas-zh/preview.mp4)
+[Watch the content-directed films](examples/director-tests/README.md) · [First-generation GitHub films](examples/SHOWCASE.md) · [看中文仪表盘](examples/pulse-atlas-zh/preview.mp4)
 
-[![Six source-specific GitHub concept films](media/showcase-grid.jpg)](examples/SHOWCASE.md)
+The [first-generation gallery](examples/SHOWCASE.md) remains available for comparison.
 
-Source to Motion is an open-source **agent skill**, not a hosted video service. Give your coding agent a GitHub repo, product site, PDF, Word document, or brief. The agent reads the source, chooses a visual concept, writes an editable animation, renders the MP4 locally, and records displayed facts against source excerpts.
+Source to Motion is an open-source **agent skill**, not a hosted video service. Give your coding agent a GitHub repo, product site, PDF, Word document, or brief. The agent researches how the product works, chooses an original visual mechanism, writes an editable animation, renders the MP4 locally, and records displayed facts against source excerpts.
 
-It provides a repeatable production workflow, source extraction, a fact manifest, a local Pillow/FFmpeg renderer, procedural audio, and a verification script. The finished style is designed for each source. The GapMine film demonstrates spatial, cinematic direction; the English and Chinese dashboard videos show how to localize wording while preserving the same numeric evidence.
+It provides a repeatable research and production workflow, source extraction, a fact manifest, local Pillow or optional browser-canvas rendering with FFmpeg, procedural audio, and a verification script. The [content-directed tests](examples/director-tests/README.md) exercise dependency traversal, analytical data flow, a private device mesh, and builder-signal discovery as different visual systems. The earlier six GitHub films share a dashboard composition and remain available as a first-generation baseline; they do not by themselves prove broad style diversity.
 
 ## Try it with Codex
 
@@ -46,17 +46,30 @@ You can replace the link with a product page, local PDF, Word file, or a brief. 
 
 | Included | What it does |
 | --- | --- |
-| `SKILL.md` | Directs the agent from source to video, with a quality gate. |
+| `SKILL.md` and [art-direction criteria](references/art-direction.md) | Require domain research and an original input → mechanism → output visual decision before rendering. |
 | `scripts/ingest.py` | Extracts bounded text from GitHub, websites, PDF, DOCX, text files, and OCR images when Tesseract is available. |
 | `facts.json` convention | Binds on-screen claims and numbers to exact source excerpts and locators. |
-| `scripts/render.py` | Turns a source-specific Pillow scene into a shareable H.264 MP4 using local FFmpeg. |
+| `scripts/render.py` and optional `scripts/render_browser.py` | Turn an authored Pillow or browser-canvas scene into a shareable H.264 MP4 using local FFmpeg. |
 | `scripts/sound.py` | Makes an original, optional electronic audio bed without a music subscription. |
 | `scripts/verify.py` | Rejects missing evidence or new numbers, checks video metadata, and creates a contact sheet. |
-| Nine editable videos | GapMine, six different GitHub projects, and English and Chinese Word dashboards. |
+| Editable case studies | Four content-directed films, the earlier GapMine and six GitHub films, and English and Chinese Word dashboards. |
 
 The verifier is a guardrail, not a fact-checking oracle. It finds exact excerpts and catches numeric additions; the agent still needs to check meaning, units, attribution, legibility, pacing, and the actual video. A publisher's benchmark is labeled as that publisher's claim.
 
 ## Examples
+
+### Content-directed stress tests
+
+The newer [four-film set](examples/director-tests/README.md) includes three real GitHub projects and a GapMine remake. Every case includes a short direction brief explaining what was researched, why its visual mechanism was chosen over an alternative, and which imagery is illustrative. Their compositions, motion fields, and peripheral facts are authored separately. These are examples of the method, not selectable presets that can be applied to any project.
+
+| Project | Visible product action | Film |
+| --- | --- | --- |
+| uv | Dependencies traverse a graph and settle into a lock structure | [watch](examples/director-tests/uv/preview.mp4) |
+| DuckDB | CSV/Parquet streams pass through a SQL query plane and organize into rows | [watch](examples/director-tests/duckdb/preview.mp4) |
+| Tailscale | Separated devices connect into an illustrative private mesh | [watch](examples/director-tests/tailscale/preview.mp4) |
+| GapMine | Builder-source threads converge into a source-linked opportunity | [watch](examples/director-tests/gapmine/preview.mp4) |
+
+### Earlier examples
 
 | Input | Visual idea | Source-checked content |
 | --- | --- | --- |
@@ -72,7 +85,7 @@ The verifier is a guardrail, not a fact-checking oracle. It finds exact excerpts
 
 The GapMine example is a **16-second, 1080×1350 (4:5) unofficial concept film** designed for a mobile social-feed card and based on a [public homepage snapshot](examples/gapmine/source.json) captured on **8 October 2026 at 09:43 UTC**; its live counters will change. A giant market landscape with a buried gap is the central visual subject. Source streams converge; illumination travels down and across the gap while source-backed panels respond. Two generated art plates contain no factual text. Camera movement, localized reveal, signal veins, dashboard, and exact numbers are rendered in code. The scene is a visual metaphor, not a recording of GapMine software; no numerical score is invented.
 
-The six [GitHub stress-test films](examples/SHOWCASE.md) use six different physical subjects and commit-pinned README excerpts. Each perimeter dashboard shows six project-specific facts or commands plus Stars and Forks from a **dated 8 October 2026 UTC GitHub API snapshot**; the latter measure repository popularity, not product performance. Their generated art contains no factual text; claims are drawn from editable manifests. The illustrations are not screenshots, actual scan findings, actual query results, or real network topologies. The Word dashboard examples share one fictional brief. The Chinese scene includes an [OFL-licensed font subset](assets/fonts/README.md). Every example has an editable scene, fact manifest, MP4, and contact sheet under `examples/`.
+The six first-generation [GitHub films](examples/SHOWCASE.md) use six different physical subjects and commit-pinned README excerpts, but share a perimeter dashboard layout. Each dashboard shows project-specific facts or commands plus Stars and Forks from a **dated 8 October 2026 UTC GitHub API snapshot**; the latter measure repository popularity, not product performance. Their generated art contains no factual text; claims are drawn from editable manifests. The illustrations are not screenshots, actual scan findings, actual query results, or real network topologies. The Word dashboard examples share one fictional brief. The Chinese scene includes an [OFL-licensed font subset](assets/fonts/README.md). Every example has an editable scene, fact manifest, MP4, and contact sheet under `examples/`.
 
 ## Run the included example manually
 
@@ -84,6 +97,15 @@ python3 scripts/verify.py --video /tmp/gapmine.mp4 --facts examples/gapmine/fact
 
 The direct renderer requires a scene file. The **skill** tells the agent to create that file for a new input. This is agent-driven automation, not a fixed template that can produce a professional video from any URL with one deterministic CLI call.
 
+To reproduce a content-directed browser scene, install the optional browser dependencies and Chromium once:
+
+```bash
+python3 -m pip install -r requirements-browser.txt
+python3 -m playwright install chromium
+python3 scripts/preview_browser.py --scene examples/director-tests/uv/scene.html --facts examples/director-tests/uv/facts.json --out /tmp/uv-contact.jpg
+python3 scripts/render_browser.py --scene examples/director-tests/uv/scene.html --facts examples/director-tests/uv/facts.json --audio examples/director-tests/uv/audio.wav --out /tmp/uv-content-directed.mp4
+```
+
 For the Chinese sample, use `examples/pulse-atlas-zh/scene.py`, `examples/pulse-atlas-zh/facts.json`, and `examples/pulse-atlas/source.json`. See the [localization rules](references/localization.md) before translating product claims.
 
 ## Scope and limits
@@ -91,7 +113,7 @@ For the Chinese sample, use `examples/pulse-atlas-zh/scene.py`, `examples/pulse-
 - Default target: 8–20 seconds. Rendering is local CPU/FFmpeg work; optional AI artwork uses the user's own model access.
 - Text-based GitHub pages, ordinary websites, PDFs, DOCX, Markdown, and common images are supported directly when their text is readable. OCR requires Tesseract. Slide decks and unusual sources need the agent's native reader or conversion.
 - Scanned, blocked, private, or misleading sources may require user-provided access or clarification. The agent must omit unsupported metrics.
-- Current output is H.264 motion graphics, including generated art plates, 2.5D camera moves, spatial reveals, procedural subject layers, and optional original audio. There is no voiceover, 3D engine, or guaranteed studio-grade result for every source.
+- Current output is H.264 motion graphics, including authored canvas fields, generated art plates, 2.5D camera moves, spatial reveals, procedural subject layers, and optional original audio. There is no voiceover, full 3D engine, or guaranteed studio-grade result for every source.
 - Do not put private source snapshots in a public repository.
 
 Read the [privacy notes](PRIVACY.md) before using private sources, and use the [showcase issue form](https://github.com/Balance0014/source-to-motion/issues/new/choose) only for material you can publish.
