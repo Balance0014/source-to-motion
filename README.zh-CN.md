@@ -4,7 +4,7 @@
 
 **给一个项目链接或文档，做出有真实动态、数字有出处的短视频。**
 
-[![uv、DuckDB、Tailscale、GapMine 四支内容驱动竖版短片](media/director-grid.jpg)](examples/director-tests/README.md)
+[![四支内容驱动短片的动态片段](media/showreel.gif)](examples/director-tests/README.md)
 
 [看新版内容驱动样片](examples/director-tests/README.md) · [看第一代 GitHub 样片](examples/SHOWCASE.md) · [看中文仪表盘](examples/pulse-atlas-zh/preview.mp4)
 
@@ -12,7 +12,7 @@
 
 Source to Motion 是一套开源的 **Agent Skill + 本地视频工具**。把 GitHub 仓库、产品网站、PDF、Word 或产品简介交给自己的 Codex，Agent 先研究产品与行业，弄清真实的“输入 → 工作过程 → 输出”，再设计与内容匹配的动态画面、编写可编辑动画、在本机渲染 MP4，并把画面上的产品事实和原文对应起来。
 
-[新版四条内容驱动样片](examples/director-tests/README.md)分别表现依赖关系遍历、文件进入 SQL 查询、设备建立私有连接、开发者信号形成机会。原有六个 GitHub 案例虽然中心物体不同，仍共用一套周边面板布局；它们保留为第一代对照，不能单独证明 Skill 已具备广泛的视觉风格能力。
+[新版五条内容驱动样片](examples/director-tests/README.md)分别表现依赖关系遍历、文件进入 SQL 查询、设备建立私有连接、开发者信号形成机会，以及递归代码搜索。原有六个 GitHub 案例虽然中心物体不同，仍共用一套周边面板布局；它们保留为第一代对照，不能单独证明 Skill 已具备广泛的视觉风格能力。
 
 你使用自己的 Codex/模型额度；Python 和 FFmpeg 在你的电脑上渲染。仓库没有托管渲染服务，也不需要把 API Key 交给仓库作者。可选的 AI 背景图同样使用你自己的工具额度。
 
@@ -50,7 +50,7 @@ ffmpeg -version
 | [Pillow 渲染](scripts/render.py) 与可选的[浏览器画布渲染](scripts/render_browser.py) | 用本地 FFmpeg 输出 H.264 MP4；根据画面运动需要选择制作方式。 |
 | [配乐脚本](scripts/sound.py) | 可选的原创程序配乐，不依赖音乐订阅。 |
 | [核验脚本](scripts/verify.py) | 检查证据片段、乱加的数字、视频元数据，并生成逐段画面检查图。 |
-| 可编辑案例 | 新版四支内容驱动短片、第一代 GitHub 与 GapMine 短片，以及 Word 简报的英文和中文视频。 |
+| 可编辑案例 | 新版五支内容驱动短片、第一代 GitHub 与 GapMine 短片，以及 Word 简报的英文和中文视频。 |
 
 核验器是防错工具：它能发现缺失出处和凭空加入的数字，**不能代替人判断翻译是否准确、画面是否好看**。Agent 必须查看实际视频，检查单位、时间范围、出处、字幕和声音。
 
@@ -58,7 +58,7 @@ ffmpeg -version
 
 ### 新版内容驱动压测
 
-这[四个案例](examples/director-tests/README.md)包含三个真实 GitHub 项目和重做的 GapMine。每个案例附有视觉决策说明，交代研究了什么、为什么选这种表达、哪些画面只是隐喻。它们不是四个供所有产品套用的固定模板。
+这[五个案例](examples/director-tests/README.md)包含四个真实 GitHub 项目和重做的 GapMine。ripgrep 是前四条和视觉决策方法完成后才选取的新项目，采用手机全屏 9:16 画幅，检验不同机制与尺寸。每个案例附有视觉决策说明，交代研究了什么、为什么选这种表达、哪些画面只是隐喻。它们不是供所有产品套用的固定模板。
 
 | 项目 | 画面里真正发生的动作 | 成片 |
 | --- | --- | --- |
@@ -66,6 +66,7 @@ ffmpeg -version
 | DuckDB | CSV/Parquet 数据流穿过 SQL 查询平面并形成结构化结果 | [观看](examples/director-tests/duckdb/preview.mp4) |
 | Tailscale | 分散设备逐步连成示意性的私有网络 | [观看](examples/director-tests/tailscale/preview.mp4) |
 | GapMine | 开发者来源信号汇聚成有出处的具体机会 | [观看](examples/director-tests/gapmine/preview.mp4) |
+| ripgrep | 递归搜索过滤文件风暴，留下匹配行 | [观看](examples/director-tests/ripgrep/preview.mp4) |
 
 ### 第一代样片
 

@@ -4,7 +4,7 @@
 
 **Turn a project link or document into a short, original motion video. Keep the numbers honest.**
 
-[![Four content-directed vertical films: uv, DuckDB, Tailscale, and GapMine](media/director-grid.jpg)](examples/director-tests/README.md)
+[![Animated excerpts from four different content-directed films](media/showreel.gif)](examples/director-tests/README.md)
 
 [Watch the content-directed films](examples/director-tests/README.md) · [First-generation GitHub films](examples/SHOWCASE.md) · [看中文仪表盘](examples/pulse-atlas-zh/preview.mp4)
 
@@ -12,7 +12,7 @@ The [first-generation gallery](examples/SHOWCASE.md) remains available for compa
 
 Source to Motion is an open-source **agent skill**, not a hosted video service. Give your coding agent a GitHub repo, product site, PDF, Word document, or brief. The agent researches how the product works, chooses an original visual mechanism, writes an editable animation, renders the MP4 locally, and records displayed facts against source excerpts.
 
-It provides a repeatable research and production workflow, source extraction, a fact manifest, local Pillow or optional browser-canvas rendering with FFmpeg, procedural audio, and a verification script. The [content-directed tests](examples/director-tests/README.md) exercise dependency traversal, analytical data flow, a private device mesh, and builder-signal discovery as different visual systems. The earlier six GitHub films share a dashboard composition and remain available as a first-generation baseline; they do not by themselves prove broad style diversity.
+It provides a repeatable research and production workflow, source extraction, a fact manifest, local Pillow or optional browser-canvas rendering with FFmpeg, procedural audio, and a verification script. The [content-directed tests](examples/director-tests/README.md) exercise dependency traversal, analytical data flow, a private device mesh, builder-signal discovery, and recursive code search as different visual systems. The earlier six GitHub films share a dashboard composition and remain available as a first-generation baseline; they do not by themselves prove broad style diversity.
 
 ## Try it with Codex
 
@@ -52,7 +52,7 @@ You can replace the link with a product page, local PDF, Word file, or a brief. 
 | `scripts/render.py` and optional `scripts/render_browser.py` | Turn an authored Pillow or browser-canvas scene into a shareable H.264 MP4 using local FFmpeg. |
 | `scripts/sound.py` | Makes an original, optional electronic audio bed without a music subscription. |
 | `scripts/verify.py` | Rejects missing evidence or new numbers, checks video metadata, and creates a contact sheet. |
-| Editable case studies | Four content-directed films, the earlier GapMine and six GitHub films, and English and Chinese Word dashboards. |
+| Editable case studies | Five content-directed films, the earlier GapMine and six GitHub films, and English and Chinese Word dashboards. |
 
 The verifier is a guardrail, not a fact-checking oracle. It finds exact excerpts and catches numeric additions; the agent still needs to check meaning, units, attribution, legibility, pacing, and the actual video. A publisher's benchmark is labeled as that publisher's claim.
 
@@ -60,7 +60,7 @@ The verifier is a guardrail, not a fact-checking oracle. It finds exact excerpts
 
 ### Content-directed stress tests
 
-The newer [four-film set](examples/director-tests/README.md) includes three real GitHub projects and a GapMine remake. Every case includes a short direction brief explaining what was researched, why its visual mechanism was chosen over an alternative, and which imagery is illustrative. Their compositions, motion fields, and peripheral facts are authored separately. These are examples of the method, not selectable presets that can be applied to any project.
+The newer [five-film set](examples/director-tests/README.md) includes four real GitHub projects and a GapMine remake. ripgrep was a held-out project selected after the first four films and the direction method were complete; its full-screen 9:16 search storm tests a different mechanism and aspect ratio. Every case includes a short direction brief explaining what was researched, why its visual mechanism was chosen over an alternative, and which imagery is illustrative. Their compositions, motion fields, and peripheral facts are authored separately. These are examples of the method, not selectable presets that can be applied to any project.
 
 | Project | Visible product action | Film |
 | --- | --- | --- |
@@ -68,6 +68,7 @@ The newer [four-film set](examples/director-tests/README.md) includes three real
 | DuckDB | CSV/Parquet streams pass through a SQL query plane and organize into rows | [watch](examples/director-tests/duckdb/preview.mp4) |
 | Tailscale | Separated devices connect into an illustrative private mesh | [watch](examples/director-tests/tailscale/preview.mp4) |
 | GapMine | Builder-source threads converge into a source-linked opportunity | [watch](examples/director-tests/gapmine/preview.mp4) |
+| ripgrep | Recursive search filters a file storm into matching lines | [watch](examples/director-tests/ripgrep/preview.mp4) |
 
 ### Earlier examples
 

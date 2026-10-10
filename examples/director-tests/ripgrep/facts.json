@@ -1,0 +1,68 @@
+{
+  "source": "https://github.com/BurntSushi/ripgrep",
+  "source_language": "en",
+  "output_language": "en",
+  "snapshot_at_utc": "2026-10-10T04:38:19+00:00",
+  "facts": [
+    {
+      "id": "name",
+      "display": "ripgrep (rg)",
+      "evidence": "ripgrep (rg)",
+      "locator": "https://raw.githubusercontent.com/BurntSushi/ripgrep/3fce3b5bb0236da2df6d99672afb8a719642eca7/README.md"
+    },
+    {
+      "id": "hero",
+      "display": "RECURSIVE REGEX SEARCH",
+      "evidence": "recursively searches the current\ndirectory for a regex pattern",
+      "locator": "https://raw.githubusercontent.com/BurntSushi/ripgrep/3fce3b5bb0236da2df6d99672afb8a719642eca7/README.md"
+    },
+    {
+      "id": "input",
+      "display": "CURRENT DIRECTORY",
+      "evidence": "recursively searches the current\ndirectory for a regex pattern",
+      "locator": "https://raw.githubusercontent.com/BurntSushi/ripgrep/3fce3b5bb0236da2df6d99672afb8a719642eca7/README.md"
+    },
+    {
+      "id": "pattern",
+      "display": "REGEX PATTERN",
+      "evidence": "directory for a regex pattern",
+      "locator": "https://raw.githubusercontent.com/BurntSushi/ripgrep/3fce3b5bb0236da2df6d99672afb8a719642eca7/README.md"
+    },
+    {
+      "id": "ignore",
+      "display": ".gitignore RULES",
+      "evidence": "respect gitignore rules",
+      "locator": "https://raw.githubusercontent.com/BurntSushi/ripgrep/3fce3b5bb0236da2df6d99672afb8a719642eca7/README.md"
+    },
+    {
+      "id": "skip",
+      "display": "HIDDEN + BINARY SKIPPED",
+      "evidence": "skip hidden files/directories and binary files",
+      "locator": "https://raw.githubusercontent.com/BurntSushi/ripgrep/3fce3b5bb0236da2df6d99672afb8a719642eca7/README.md"
+    },
+    {
+      "id": "filetype",
+      "display": "rg -tpy foo",
+      "evidence": "`rg -tpy foo` limits your search to Python files",
+      "locator": "https://raw.githubusercontent.com/BurntSushi/ripgrep/3fce3b5bb0236da2df6d99672afb8a719642eca7/README.md"
+    },
+    {
+      "id": "output",
+      "display": "MATCHING LINES",
+      "evidence": "line-oriented search tool",
+      "locator": "https://raw.githubusercontent.com/BurntSushi/ripgrep/3fce3b5bb0236da2df6d99672afb8a719642eca7/README.md"
+    },
+    {
+      "id": "platform",
+      "display": "WINDOWS · MACOS · LINUX",
+      "evidence": "Windows, macOS and Linux",
+      "locator": "https://raw.githubusercontent.com/BurntSushi/ripgrep/3fce3b5bb0236da2df6d99672afb8a719642eca7/README.md"
+    },
+    {
+      "id": "override",
+      "display": "rg -uuu",
+      "evidence": "use `rg -uuu`",
+      "locator": "https://raw.githubusercontent.com/BurntSushi/ripgrep/3fce3b5bb0236da2df6d99672afb8a719642eca7/README.md"
+    }
+  ]
+}
