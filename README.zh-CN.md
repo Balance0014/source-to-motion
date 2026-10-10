@@ -18,19 +18,15 @@ Source to Motion 是一套开源的 **Agent Skill + 本地视频工具**。把 G
 
 ## 直接使用
 
-需要 Python 3.10+、FFmpeg，以及能运行本地 Python 的 Codex。安装 Skill 有两种方式：
-
-也可以用已验证的 [skills CLI](https://www.skills.sh/docs/cli) 安装 Skill：
+需要 Python 3.10+、FFmpeg，以及能运行本地 Python 的 Codex。用 [skills CLI](https://www.skills.sh/docs/cli) 安装**同一个仓库**里的轻量 `skill-only` 分支；主分支继续展示样片。安装包约 0.3 MB，不会把 MP4 案例一并装进你的 Skill 目录：
 
 ```bash
-npx skills add Balance0014/source-to-motion -g -a codex -y
+npx skills add https://github.com/Balance0014/source-to-motion/tree/skill-only -g -a codex -y
 ```
 
-CLI 会显示安装位置；随后在该目录安装 `requirements.txt`。如果想要明确的固定目录，直接运行：
+CLI 会显示安装位置；随后在该目录安装 `requirements.txt`，并确认 FFmpeg 可用：
 
 ```bash
-git clone https://github.com/Balance0014/source-to-motion.git ~/.codex/skills/source-to-motion
-python3 -m pip install -r ~/.codex/skills/source-to-motion/requirements.txt
 ffmpeg -version
 ```
 
@@ -44,7 +40,7 @@ ffmpeg -version
 
 | 内容 | 作用 |
 | --- | --- |
-| [SKILL.md](SKILL.md) 和[视觉决策方法](references/art-direction.md) | 要求先研究产品、选择符合工作原理的画面，再开始渲染。 |
+| [可安装的 SKILL.md](skill/source-to-motion/SKILL.md) 和[视觉决策方法](references/art-direction.md) | 要求先研究产品、选择符合工作原理的画面，再开始渲染。 |
 | [资料抽取脚本](scripts/ingest.py) | 读取 GitHub、普通网页、PDF、DOCX、文本；图片可在安装 Tesseract 后做 OCR。 |
 | `facts.json` 事实清单 | 保存每条画面文案、数字对应的原文片段和位置。 |
 | [Pillow 渲染](scripts/render.py) 与可选的[浏览器画布渲染](scripts/render_browser.py) | 用本地 FFmpeg 输出 H.264 MP4；根据画面运动需要选择制作方式。 |
@@ -87,6 +83,8 @@ GapMine 样片是面向手机信息流的 **16 秒、1080×1350（4:5）竖版�
 [六个第一代 GitHub 案例](examples/SHOWCASE.md)固定到具体 README 提交，中央主体各不相同，但周边面板共用同一布局。每条显示项目特有的功能或命令，以及 **2026 年 10 月 8 日 UTC 的 GitHub API 快照**中的 Star/Fork 数。后者只是仓库热度，不代表产品性能；所有画面事实都能在清单中找到来源。生成的美术素材不含事实文字。画面不是项目真实界面、真实扫描发现、真实查询结果或真实网络拓扑。Word 简报及其数字是**虚构测试资料**。字体许可见[字体说明](assets/fonts/README.md)。
 
 ## 自己复现样片
+
+要复现可编辑案例，可另外克隆完整仓库；这和轻量 Skill 安装是两件事。在仓库根目录运行：
 
 在仓库根目录运行：
 
