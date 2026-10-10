@@ -18,17 +18,15 @@ It provides a repeatable research and production workflow, source extraction, a 
 
 Requirements: Python 3.10+, FFmpeg on your `PATH`, and a coding agent able to run local Python. Optional image generation uses **your own** agent/tool access. The scripts themselves make no model API calls and need no API key.
 
-The [skills CLI](https://www.skills.sh/docs/cli) detects this repository's skill. To install the skill into Codex:
+The [skills CLI](https://www.skills.sh/docs/cli) installs the small `skill-only` branch of **this same repository** into Codex. The gallery stays on `main`; the installed skill is about 0.3 MB and does not include the MP4 case studies:
 
 ```bash
-npx skills add Balance0014/source-to-motion -g -a codex -y
+npx skills add https://github.com/Balance0014/source-to-motion/tree/skill-only -g -a codex -y
 ```
 
-Then install the Python requirements from the installed skill directory shown by the CLI. If you prefer a direct clone with a known path, use:
+Then install `requirements.txt` from the installed directory shown by the CLI and check FFmpeg:
 
 ```bash
-git clone https://github.com/Balance0014/source-to-motion.git ~/.codex/skills/source-to-motion
-python3 -m pip install -r ~/.codex/skills/source-to-motion/requirements.txt
 ffmpeg -version
 ```
 
@@ -46,7 +44,7 @@ You can replace the link with a product page, local PDF, Word file, or a brief. 
 
 | Included | What it does |
 | --- | --- |
-| `SKILL.md` and [art-direction criteria](references/art-direction.md) | Require domain research and an original input → mechanism → output visual decision before rendering. |
+| [Installable SKILL.md](skill/source-to-motion/SKILL.md) and [art-direction criteria](references/art-direction.md) | Require domain research and an original input → mechanism → output visual decision before rendering. |
 | `scripts/ingest.py` | Extracts bounded text from GitHub, websites, PDF, DOCX, text files, and OCR images when Tesseract is available. |
 | `facts.json` convention | Binds on-screen claims and numbers to exact source excerpts and locators. |
 | `scripts/render.py` and optional `scripts/render_browser.py` | Turn an authored Pillow or browser-canvas scene into a shareable H.264 MP4 using local FFmpeg. |
@@ -89,6 +87,8 @@ The GapMine example is a **16-second, 1080×1350 (4:5) unofficial concept film**
 The six first-generation [GitHub films](examples/SHOWCASE.md) use six different physical subjects and commit-pinned README excerpts, but share a perimeter dashboard layout. Each dashboard shows project-specific facts or commands plus Stars and Forks from a **dated 8 October 2026 UTC GitHub API snapshot**; the latter measure repository popularity, not product performance. Their generated art contains no factual text; claims are drawn from editable manifests. The illustrations are not screenshots, actual scan findings, actual query results, or real network topologies. The Word dashboard examples share one fictional brief. The Chinese scene includes an [OFL-licensed font subset](assets/fonts/README.md). Every example has an editable scene, fact manifest, MP4, and contact sheet under `examples/`.
 
 ## Run the included example manually
+
+Clone the full repository when you want the editable gallery; this is separate from the small skill install. Run these commands from the repository root:
 
 ```bash
 python3 examples/gapmine/sound.py

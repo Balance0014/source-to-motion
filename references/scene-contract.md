@@ -35,6 +35,8 @@ window.SCENE = {
 
 `facts` is the same map of source-backed fact IDs as in Python. The renderer evaluates `SCENE.render` at each frame time and captures the canvas. Avoid random values inside `render` unless they are seeded and repeatable; build random particles once at load time. Do not load remote scripts, fonts, or images: bundle the assets with the editable scene. Install `requirements-browser.txt` and run `python -m playwright install chromium` once. `scripts/preview_browser.py` captures three frames before a full render.
 
+For a new scene outside this repository, copy the optional `scripts/canvas_core.js` from the installed skill beside `scene.html` and load it with `<script src="./canvas_core.js"></script>`. Copy any used fonts or image plates beside the scene as well, and resolve their paths from that scene file. The case studies use paths relative to this repository only because they live in the gallery.
+
 ```bash
 python scripts/preview_browser.py --scene scene.html --facts facts.json --out contact.jpg
 python scripts/render_browser.py --scene scene.html --facts facts.json --audio audio.wav --out video.mp4

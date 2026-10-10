@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.2 — 2026-10-09
+
+- Split the installable skill into a small package within the same repository. The main branch keeps the case-study gallery; the `skill-only` branch carries just the instructions, runtime scripts, references, dependencies, and fonts.
+- Added a package sync check and CI publication so the lightweight branch follows verified main-branch changes.
+- Verified the public skills CLI installation path from a clean directory.
+
 ## v0.3.1 — 2026-10-09
 
 - Added ripgrep as a held-out, commit-pinned GitHub case after the first four films. Its 9:16 file storm visualizes recursive search, ignore filtering, and matching lines without fake result data or benchmark numbers.
