@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.1 — 2026-10-09
+
+- Added ripgrep as a held-out, commit-pinned GitHub case after the first four films. Its 9:16 file storm visualizes recursive search, ignore filtering, and matching lines without fake result data or benchmark numbers.
+- Added an animated GitHub README showreel assembled from the already rendered case studies.
+
 ## v0.3.0 — 2026-10-08
 
 - Reworked the skill's art-direction gate: research the product mechanism and industry, compare two visual approaches, then storyboard distinct camera, motion, and peripheral facts before rendering.
