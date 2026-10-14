@@ -4,3 +4,10 @@ __pycache__/
 .venv/
 *.log
 tmp/
+
+# Rendered films and audio live in the showcase-media release, not in git history.
+*.mp4
+*.mov
+*.webm
+*.wav
+*.mp3

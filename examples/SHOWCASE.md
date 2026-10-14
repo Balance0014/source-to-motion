@@ -6,14 +6,14 @@ Each 12-second, 1080×1350 film is an **unofficial visual concept**. Each `sourc
 
 | Project / 项目 | Film / 视频 | Real dashboard content / 真实面板内容 | GitHub snapshot: Stars / Forks | Evidence / 事实 |
 | --- | --- | --- | ---: | --- |
-| [uv](https://github.com/astral-sh/uv) | [MP4](uv/preview.mp4) | `uv init`, lockfile, `uv sync`, script run, Python versions, cache | 90,501 / 3,635 | [manifest](uv/facts.json) |
-| [Ollama](https://github.com/ollama/ollama) | [MP4](ollama/preview.mp4) | Open models, `ollama run`, REST API, local endpoint, Python/JS clients | 182,581 / 18,156 | [manifest](ollama/facts.json) |
-| [Trivy](https://github.com/aquasecurity/trivy) | [MP4](trivy/preview.mp4) | Container, repo and filesystem targets; CVE, config, secret checks | 38,295 / 746 | [manifest](trivy/facts.json) |
-| [DuckDB](https://github.com/duckdb/duckdb) | [MP4](duckdb/preview.mp4) | CSV/Parquet, exact README SQL examples, window functions, clients | 41,986 / 3,882 | [manifest](duckdb/facts.json) |
-| [Tailscale](https://github.com/tailscale/tailscale) | [MP4](tailscale/preview.mp4) | WireGuard network, daemon, CLI, supported device platforms | 37,275 / 3,299 | [manifest](tailscale/facts.json) |
-| [Excalidraw](https://github.com/excalidraw/excalidraw) | [MP4](excalidraw/preview.mp4) | Infinite canvas, hand-drawn style, collaboration, encryption, export | 133,691 / 15,622 | [manifest](excalidraw/facts.json) |
+| [uv](https://github.com/astral-sh/uv) | [MP4](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/uv-preview.mp4) | `uv init`, lockfile, `uv sync`, script run, Python versions, cache | 90,501 / 3,635 | [manifest](uv/facts.json) |
+| [Ollama](https://github.com/ollama/ollama) | [MP4](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/ollama-preview.mp4) | Open models, `ollama run`, REST API, local endpoint, Python/JS clients | 182,581 / 18,156 | [manifest](ollama/facts.json) |
+| [Trivy](https://github.com/aquasecurity/trivy) | [MP4](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/trivy-preview.mp4) | Container, repo and filesystem targets; CVE, config, secret checks | 38,295 / 746 | [manifest](trivy/facts.json) |
+| [DuckDB](https://github.com/duckdb/duckdb) | [MP4](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/duckdb-preview.mp4) | CSV/Parquet, exact README SQL examples, window functions, clients | 41,986 / 3,882 | [manifest](duckdb/facts.json) |
+| [Tailscale](https://github.com/tailscale/tailscale) | [MP4](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/tailscale-preview.mp4) | WireGuard network, daemon, CLI, supported device platforms | 37,275 / 3,299 | [manifest](tailscale/facts.json) |
+| [Excalidraw](https://github.com/excalidraw/excalidraw) | [MP4](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/excalidraw-preview.mp4) | Infinite canvas, hand-drawn style, collaboration, encryption, export | 133,691 / 15,622 | [manifest](excalidraw/facts.json) |
 
-For each case, the editable `scene.py`, `facts.json`, `source.json`, `audio.wav`, and `contact.jpg` sit beside its MP4. Shared compositing lives in [`scripts/showcase_engine.py`](../scripts/showcase_engine.py). These six custom hero scenes are test examples, not six fixed presets for future inputs. A new product still requires its own business reading and visual direction.
+For each case, the editable `scene.py`, `facts.json`, `source.json`, and `contact.jpg` live here; the rendered MP4 and its `audio.wav` are attached to the [showcase-media release](https://github.com/Balance0014/source-to-motion/releases/tag/showcase-media) to keep the repository small. Shared compositing lives in [`scripts/showcase_engine.py`](../scripts/showcase_engine.py). These six custom hero scenes are test examples, not six fixed presets for future inputs. A new product still requires its own business reading and visual direction.
 
 The [art prompts](SHOWCASE-ART.md) and generated plates are included for reproducibility. The videos themselves add spatial reveals, subject-layer motion, source-checked type, and sound in code.
 

@@ -4,10 +4,10 @@ Five source-backed case studies exercise different product mechanisms and author
 
 | Case | Mechanism visualized | Film | Direction and evidence |
 | --- | --- | --- | --- |
-| uv | dependency graph traversed and locked | [watch](uv/preview.mp4) | [brief](uv/direction.md) · [facts](uv/facts.json) · [frames](uv/contact.jpg) |
-| DuckDB | file streams through a SQL query plane | [watch](duckdb/preview.mp4) | [brief](duckdb/direction.md) · [facts](duckdb/facts.json) · [frames](duckdb/contact.jpg) |
-| Tailscale | separated devices form a private mesh | [watch](tailscale/preview.mp4) | [brief](tailscale/direction.md) · [facts](tailscale/facts.json) · [frames](tailscale/contact.jpg) |
-| GapMine | scattered builder evidence becomes an opportunity | [watch](gapmine/preview.mp4) | [brief](gapmine/direction.md) · [facts](gapmine/facts.json) · [frames](gapmine/contact.jpg) |
-| ripgrep | recursive search filters a storm of file slates into matching lines | [watch](ripgrep/preview.mp4) | [brief](ripgrep/direction.md) · [facts](ripgrep/facts.json) · [frames](ripgrep/contact.jpg) |
+| uv | dependency graph traversed and locked | [watch](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/director-tests-uv-preview.mp4) | [brief](uv/direction.md) · [facts](uv/facts.json) · [frames](uv/contact.jpg) |
+| DuckDB | file streams through a SQL query plane | [watch](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/director-tests-duckdb-preview.mp4) | [brief](duckdb/direction.md) · [facts](duckdb/facts.json) · [frames](duckdb/contact.jpg) |
+| Tailscale | separated devices form a private mesh | [watch](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/director-tests-tailscale-preview.mp4) | [brief](tailscale/direction.md) · [facts](tailscale/facts.json) · [frames](tailscale/contact.jpg) |
+| GapMine | scattered builder evidence becomes an opportunity | [watch](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/director-tests-gapmine-preview.mp4) | [brief](gapmine/direction.md) · [facts](gapmine/facts.json) · [frames](gapmine/contact.jpg) |
+| ripgrep | recursive search filters a storm of file slates into matching lines | [watch](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/director-tests-ripgrep-preview.mp4) | [brief](ripgrep/direction.md) · [facts](ripgrep/facts.json) · [frames](ripgrep/contact.jpg) |
 
 Each case contains `direction.md`, `facts.json`, `source.json`, `scene.html`, audio, a rendered MP4, and a contact sheet. The scene is editable. Visual objects and paths are illustrative; displayed facts and numbers are tied to exact source excerpts. These cases test diversity; they are not interchangeable templates.

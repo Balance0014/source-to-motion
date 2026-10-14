@@ -6,7 +6,7 @@
 
 [![Animated excerpts from four different content-directed films](media/showreel.gif)](examples/director-tests/README.md)
 
-[Watch the content-directed films](examples/director-tests/README.md) · [First-generation GitHub films](examples/SHOWCASE.md) · [看中文仪表盘](examples/pulse-atlas-zh/preview.mp4)
+[Watch the content-directed films](examples/director-tests/README.md) · [First-generation GitHub films](examples/SHOWCASE.md) · [看中文仪表盘](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/pulse-atlas-zh-preview.mp4)
 
 The [first-generation gallery](examples/SHOWCASE.md) remains available for comparison.
 
@@ -62,11 +62,11 @@ The newer [five-film set](examples/director-tests/README.md) includes four real 
 
 | Project | Visible product action | Film |
 | --- | --- | --- |
-| uv | Dependencies traverse a graph and settle into a lock structure | [watch](examples/director-tests/uv/preview.mp4) |
-| DuckDB | CSV/Parquet streams pass through a SQL query plane and organize into rows | [watch](examples/director-tests/duckdb/preview.mp4) |
-| Tailscale | Separated devices connect into an illustrative private mesh | [watch](examples/director-tests/tailscale/preview.mp4) |
-| GapMine | Builder-source threads converge into a source-linked opportunity | [watch](examples/director-tests/gapmine/preview.mp4) |
-| ripgrep | Recursive search filters a file storm into matching lines | [watch](examples/director-tests/ripgrep/preview.mp4) |
+| uv | Dependencies traverse a graph and settle into a lock structure | [watch](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/director-tests-uv-preview.mp4) |
+| DuckDB | CSV/Parquet streams pass through a SQL query plane and organize into rows | [watch](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/director-tests-duckdb-preview.mp4) |
+| Tailscale | Separated devices connect into an illustrative private mesh | [watch](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/director-tests-tailscale-preview.mp4) |
+| GapMine | Builder-source threads converge into a source-linked opportunity | [watch](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/director-tests-gapmine-preview.mp4) |
+| ripgrep | Recursive search filters a file storm into matching lines | [watch](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/director-tests-ripgrep-preview.mp4) |
 
 ### Earlier examples
 
@@ -80,7 +80,7 @@ The newer [five-film set](examples/director-tests/README.md) includes four real 
 | [Tailscale GitHub repository](https://github.com/tailscale/tailscale) | Separate device islands become a private mesh | Private WireGuard networks, daemon and CLI |
 | [Excalidraw GitHub repository](https://github.com/excalidraw/excalidraw) | A suspended hand-drawn canvas builds a shared diagram | Infinite canvas, collaboration, PNG/SVG export |
 | [Fictional Word brief](examples/pulse-atlas/brief.docx) | Warm editorial incident dashboard | **2,480** events, **97.4%** auto-tagged, **12 min** median response, all marked synthetic demo data |
-| [Same English brief → Chinese video](examples/pulse-atlas-zh/preview.mp4) | Localized editorial dashboard | Same **2,480**, **97.4%**, and **12 分钟**, with original English evidence retained in [facts.json](examples/pulse-atlas-zh/facts.json) |
+| [Same English brief → Chinese video](https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/pulse-atlas-zh-preview.mp4) | Localized editorial dashboard | Same **2,480**, **97.4%**, and **12 分钟**, with original English evidence retained in [facts.json](examples/pulse-atlas-zh/facts.json) |
 
 The GapMine example is a **16-second, 1080×1350 (4:5) unofficial concept film** designed for a mobile social-feed card and based on a [public homepage snapshot](examples/gapmine/source.json) captured on **8 October 2026 at 09:43 UTC**; its live counters will change. A giant market landscape with a buried gap is the central visual subject. Source streams converge; illumination travels down and across the gap while source-backed panels respond. Two generated art plates contain no factual text. Camera movement, localized reveal, signal veins, dashboard, and exact numbers are rendered in code. The scene is a visual metaphor, not a recording of GapMine software; no numerical score is invented.
 
@@ -103,6 +103,7 @@ To reproduce a content-directed browser scene, install the optional browser depe
 ```bash
 python3 -m pip install -r requirements-browser.txt
 python3 -m playwright install chromium
+curl -L -o examples/director-tests/uv/audio.wav https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/director-tests-uv-audio.wav
 python3 scripts/preview_browser.py --scene examples/director-tests/uv/scene.html --facts examples/director-tests/uv/facts.json --out /tmp/uv-contact.jpg
 python3 scripts/render_browser.py --scene examples/director-tests/uv/scene.html --facts examples/director-tests/uv/facts.json --audio examples/director-tests/uv/audio.wav --out /tmp/uv-content-directed.mp4
 ```

@@ -6,6 +6,7 @@ from __future__ import annotations
 import io
 import shutil
 import subprocess
+import urllib.request
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
@@ -13,6 +14,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "media" / "social-preview.jpg"
 W, H = 1280, 640
+RELEASE = "https://github.com/Balance0014/source-to-motion/releases/download/showcase-media/"
 
 
 def ffmpeg_executable() -> str:
@@ -28,6 +30,8 @@ def ffmpeg_executable() -> str:
 
 def film_frame(name: str, seconds: float) -> Image.Image:
     video = ROOT / "examples" / "director-tests" / name / "preview.mp4"
+    if not video.exists():  # films are release assets, not tracked files
+        urllib.request.urlretrieve(f"{RELEASE}director-tests-{name}-preview.mp4", video)
     result = subprocess.run(
         [
             ffmpeg_executable(), "-hide_banner", "-loglevel", "error",

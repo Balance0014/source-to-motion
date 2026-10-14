@@ -16,6 +16,19 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Keep media and large files out of git
+        run: |
+          python - <<'PY'
+          import os, subprocess, sys
+          files = [f for f in subprocess.run(["git", "ls-files", "-z"], capture_output=True, text=True, check=True).stdout.split("\0") if f]
+          media = [f for f in files if f.lower().endswith((".mp4", ".mov", ".webm", ".wav", ".mp3"))]
+          large = [f for f in files if os.path.getsize(f) > 8 * 1024 * 1024]
+          for f in media:
+              print(f"::error file={f}::Attach rendered media to the showcase-media release instead of committing it")
+          for f in large:
+              print(f"::error file={f}::File is larger than 8 MB")
+          sys.exit(1 if media or large else 0)
+          PY
       - run: python -m pip install -r requirements.txt
       - run: python scripts/sync_skill_package.py --check
       - run: python -m unittest discover -s tests -v
